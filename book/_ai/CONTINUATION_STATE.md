@@ -6,7 +6,7 @@ Volume XVIII — Legacy PHP
 
 ## Current Chapter
 
-Chapter 270 — PHP 5 Codebases
+Chapter 271 — Legacy Architecture
 
 ## Current Section
 
@@ -14,7 +14,7 @@ The Why This Matters section.
 
 ## Completed Material
 
-Volume XVII Chapters 256–269 are complete through production PHP-FPM pools, containers, configuration, secrets, logging, metrics, health checks, deployment, rollback, CI/CD, backups, disaster recovery, and incident response. These chapters establish process and pool lifecycle, resource and artifact limits, typed runtime configuration, secret rotation, structured operational evidence, quantitative signals, bounded metric dimensions, health-state contracts, deployment artifacts, mixed-version compatibility, rollout evidence, rollback boundaries, recovery capability, pipeline evidence, artifact promotion, recovery points, RPO/RTO, restore validation, failure domains, continuity modes, failover/failback, fencing, incident command, containment, evidence preservation, and production access controls.
+Volume XVII Chapters 256–269 are complete through production PHP-FPM pools, containers, configuration, secrets, logging, metrics, health checks, deployment, rollback, CI/CD, backups, disaster recovery, and incident response. These chapters establish process and pool lifecycle, resource and artifact limits, typed runtime configuration, secret rotation, structured operational evidence, quantitative signals, bounded metric dimensions, health-state contracts, deployment artifacts, mixed-version compatibility, rollout evidence, rollback boundaries, recovery capability, pipeline evidence, artifact promotion, recovery points, RPO/RTO, restore validation, failure domains, continuity modes, failover/failback, fencing, incident command, containment, evidence preservation, and production access controls. Chapter 270 begins Volume XVIII with PHP 5 codebases as runtime, extension, dependency, configuration, application, data, deployment, and operations systems rather than merely old syntax.
 
 Volume XVI Chapters 251–253 are complete through eventual consistency, CAP, and service boundaries. Volume XVII Chapters 254–255 are complete through Linux process and resource boundaries and Nginx routing, FastCGI, limits, buffering, TLS, caching, and observability.
 
@@ -109,19 +109,19 @@ Chapters 120–123 link to official Doctrine/PDO/PostgreSQL/MySQL documentation.
 
 ## Open Threads
 
-- Continue Volume XVIII with Chapter 270 on PHP 5 codebases, carrying forward operational evidence, recovery boundaries, incident learning, and the distinction between legacy compatibility and production safety.
+- Continue Volume XVIII with Chapter 271 on legacy architecture, carrying forward the exact runtime inventory, hidden-contract evidence, security containment, and explicit migration seams established in Chapter 270.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 270 — PHP 5 Codebases: the Why This Matters section.
+Chapter 271 — Legacy Architecture: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Continue with Chapter 270, following the legacy-PHP outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Chapter 270 is complete. Continue with Chapter 271, following the legacy-PHP outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
 
-Chapters 236–269 are complete. Continue with Chapter 270 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–270 are complete. Continue with Chapter 271 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -181,6 +181,8 @@ For Chapter 267, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved,
 For Chapter 268, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and git diff --check passed. NIST contingency-planning guidance and official PostgreSQL/MySQL backup and recovery documentation were checked on 2026-09-16. Failure domains, capability-level RPO/RTO, failover/failback, fencing, replication divergence, degraded service, dependency recovery, capacity, security, and technical/tabletop recovery claims were proofread. Live regional failover, identity, DNS, database, queue, provider, registry, and recovery-environment integrations were not run.
 
 For Chapter 269, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and git diff --check passed. NIST SP 800-61 Revision 3 and the NIST Incident Response project guidance were checked on 2026-09-16. Incident declaration, severity, role authority, containment, evidence preservation, communication, handoff, security/privacy, closure, and technical/tabletop response claims were proofread. Live paging, incident-management, security-forensics, communications, deployment, failover, and recovery integrations were not run.
+
+For Chapter 270, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and git diff --check passed. Official PHP migration and history documentation was checked on 2026-09-16 for PHP 5 version boundaries, PHP 5.6-to-7.0 migration notes, deprecated functionality, and removed legacy APIs. PHP 5 runtime compatibility, live legacy production, database, queue, provider, and migration integrations were not run.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
