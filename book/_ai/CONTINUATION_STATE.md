@@ -6,7 +6,7 @@ Volume XIX — Small Engineering Projects
 
 ## Current Chapter
 
-Chapter 282 — URL Shortener
+Chapter 283 — File Importer
 
 ## Current Section
 
@@ -120,6 +120,8 @@ Chapter 280 adds an incremental tennis reservation service, facility-local time 
 
 Chapter 281 adds rate limiting as admission control, policy dimensions, fixed/sliding/token-bucket models, integer microtoken arithmetic, process and shared clocks, atomic shared-state updates, canonical identity keys, operation cost and fairness, HTTP semantics, fail-open/closed policy, storage-outage behavior, bounded metrics, and policy-version rollout exercises.
 
+Chapter 282 adds the URL-shortener project, public code and destination contracts, safe URL validation without server-side fetching, cryptographically secure base62 code generation, database uniqueness and bounded collision retries, idempotent creation with request fingerprints, mapping lifecycle and disablement, redirect/cache semantics, asynchronous privacy-aware analytics, ownership and abuse controls, race/cache tests, and rollout/recovery exercises.
+
 ## Cross-References
 
 The opening section links to the official PHP Manual introduction, basic syntax, and language reference. Volumes IV–V cross-reference PHP internals, memory, runtime, workers, and configuration. Chapters 72–91 link to relevant PHP Manual array, memory, generator, random-number, sorting, searching, stack, queue, object storage, garbage collection, SPL heap, priority-queue, date-time, monotonic-clock, PDO transaction, and `array_key_exists()` references, plus primary streaming-algorithm papers. Chapters 92–98 link to official Composer CLI/schema/source documentation, SemVer, PHP autoloading, PHP-FIG PSR-4, Composer ClassLoader, and PSR-4 sources. Chapter 99 links to current PHP-FIG mission/bylaws, PSR workflow/amendments/voting, participation, FAQ, status index, and RFC 2119. Chapters 100–101 link to official PHP-FIG PSR/PER indexes and specifications, the PHP Manual, and PHPStan/Psalm documentation. Chapters 102–103 link to PHP-FIG style texts, PHP-CS-Fixer, PHP_CodeSniffer, Rector, the PHP Manual, and Chapter 272 on characterization testing. The book outline and authoring rules remain defined in [SKELETON.md](../../SKELETON.md) and [AI_AUTHORING_GUIDE.md](../../AI_AUTHORING_GUIDE.md).
@@ -130,19 +132,19 @@ Chapters 120–123 link to official Doctrine/PDO/PostgreSQL/MySQL documentation.
 
 ## Open Threads
 
-- Continue Volume XIX with Chapter 282 on the URL Shortener, carrying forward the runtime, architecture, characterization, refactoring, framework, database, version-migration, case-study, reservation-service, and rate-limiter evidence developed in Chapters 270–281.
+- Continue Volume XIX with Chapter 283 on the File Importer, carrying forward the runtime, architecture, characterization, refactoring, framework, database, version-migration, case-study, reservation-service, rate-limiter, and URL-shortener evidence developed in Chapters 270–282.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 282 — URL Shortener: the Why This Matters section.
+Chapter 283 — File Importer: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–281 are complete. Continue with Chapter 282, following the small-project outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–282 are complete. Continue with Chapter 283, following the small-project outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
 
-Chapters 236–281 are complete. Continue with Chapter 282 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–282 are complete. Continue with Chapter 283 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -222,6 +224,12 @@ For Chapter 277, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved,
 For Chapter 278, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and `git diff --check` passed. Official PHP migration, deprecation, and PHP history documentation was checked on 2026-09-16 for version boundaries and migration guidance. The chapter was proofread for runtime matrices, extension and SAPI drift, compatibility gates, staged rollout, worker behavior, resource changes, and rollback. No PHP 5 runtime, live framework, database, provider, queue, deployment, or runtime-rollout integration was run.
 
 For Chapter 279, PHP 8.5.10 should lint the modern examples while the illustrative PHP 5 page remains separate legacy-runtime evidence. Local Markdown links and `git diff --check` should pass. The case-study facts are fictional; its migration principles were proofread against Chapters 270–278 and the partial-failure, idempotency, message-delivery, deployment, and rollback chapters.
+
+For Chapter 280, PHP 8.5.10 linted 2 PHP examples, local Markdown links resolved, and `git diff --check` passed. The chapter was proofread for half-open intervals, facility time zones, DST ambiguity, concurrency, active reservation states, idempotency fingerprints, authorization, outbox effects, bounded metrics, and rollback. Live database, cache, queue, provider, and reservation integrations were not run.
+
+For Chapter 281, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and `git diff --check` passed. The chapter was proofread for token arithmetic, backward-clock handling, atomic shared state, identity and proxy trust, HTTP retry semantics, fail-open/closed choices, privacy, policy versions, and storage outages. Live Redis, database, proxy, and load integrations were not run.
+
+For Chapter 282, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and `git diff --check` passed. The chapter was proofread for secure code generation, uniqueness and collision retries, URL and SSRF boundaries, redirect/cache semantics, idempotent creation, lifecycle and revocation, analytics privacy, authorization, abuse controls, and rollback. Live database, cache, queue, preview-worker, provider, and traffic integrations were not run.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
