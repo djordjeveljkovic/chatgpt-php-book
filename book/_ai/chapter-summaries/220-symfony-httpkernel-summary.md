@@ -1,41 +1,38 @@
 # AI Summary — Chapter 220 — Symfony HttpKernel
 
-- Status: planned
+- Status: complete
 - Volume: Volume 14 — LARAVEL AND SYMFONY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains HttpKernel request-to-response flow, kernel contract, request/controller/response/exception/termination events, subscribers, listener priorities, main versus sub-requests, failure mapping, testing, and operations.
 
 ## Concepts already explained
 
-None.
+HttpKernel coordinates lifecycle stages; listeners should implement focused boundary policies rather than hide domain workflows. Required durability cannot depend on termination work, and event registration and ordering require kernel integration tests.
 
 ## Terminology established
 
-None.
+HttpKernel, kernel event, main request, sub-request, listener priority, response subscriber, exception mapping, termination work.
 
 ## Examples used
 
-None.
+A kernel dispatch function, locale request subscriber, response/exception subscriber guidance, and a migration from termination email to an outbox-backed queue.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 217 — Symfony Overview](../../volumes/14-laravel-and-symfony/217-symfony-overview.md)
+- [Chapter 218 — Symfony Components](../../volumes/14-laravel-and-symfony/218-symfony-components.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 221 — Symfony Messenger: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XIV proofread. HttpKernel guidance links to official Symfony documentation.

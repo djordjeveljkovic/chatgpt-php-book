@@ -1,41 +1,36 @@
 # AI Summary — Chapter 216 — Laravel Testing
 
-- Status: planned
+- Status: complete
 - Volume: Volume 14 — LARAVEL AND SYMFONY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Laravel testing helpers are covered across feature and HTTP tests, database factories, jobs, events, mail, notifications, container and HTTP mocking, security, parallelism, diagnostics, and CI.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+Feature test, HTTP assertion, factory, database reset, queue fake, provider fake, contract boundary, parallel test namespace, and coverage signal.
 
 ## Examples used
 
-None.
+A PHP reservation API feature test, queue dispatch assertion, and narrow FraudGateway test stub.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 162 — API Tests](../../volumes/11-testing/162-api-tests.md)
+- [Chapter 163 — End-to-End Tests](../../volumes/11-testing/163-end-to-end-tests.md)
+- [Chapter 214 — Laravel ORM](../../volumes/14-laravel-and-symfony/214-laravel-orm.md)
+- [Chapter 215 — Laravel Queues](../../volumes/14-laravel-and-symfony/215-laravel-queues.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 217 on Symfony overview.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 217 — Symfony Overview: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; Laravel application and browser tests were not run.

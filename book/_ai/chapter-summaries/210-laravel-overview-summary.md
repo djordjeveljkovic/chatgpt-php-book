@@ -1,41 +1,34 @@
 # AI Summary — Chapter 210 — Laravel Overview
 
-- Status: planned
+- Status: complete
 - Volume: Volume 14 — LARAVEL AND SYMFONY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Covers Laravel application shape, routes, controllers, Form Requests, service providers, container bindings, Eloquent, transactions, queues, workers, tests, and common security/performance failures.
 
 ## Concepts already explained
 
-None.
+Laravel conventions vary by installed release; generated application structure and current documentation are authoritative. Framework conveniences do not replace authorization, explicit representations, idempotent jobs, or operational metrics.
 
 ## Terminology established
 
-None.
+Route, middleware, Form Request, service provider, container binding, Eloquent, after-commit event, queue worker, feature test.
 
 ## Examples used
 
-None.
+Invoice route/controller, BillingServiceProvider, transaction and after-commit event, and queued invoice job design.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 209 — What Frameworks Actually Do](../../volumes/14-laravel-and-symfony/209-what-frameworks-actually-do.md)
+- [Chapter 212 — Laravel Container](../../volumes/14-laravel-and-symfony/212-laravel-container.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 211 — Laravel Request Lifecycle: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; Laravel documentation links use version-neutral URLs.

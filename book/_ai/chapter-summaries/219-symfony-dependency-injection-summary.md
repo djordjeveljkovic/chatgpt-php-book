@@ -1,41 +1,38 @@
 # AI Summary — Chapter 219 — Symfony Dependency Injection
 
-- Status: planned
+- Status: complete
 - Volume: Volume 14 — LARAVEL AND SYMFONY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains Symfony service definitions, autowiring, aliases, scalar configuration, private and lazy services, lifetimes, factories, decorators, compiler passes, container tests, and deployment failures.
 
 ## Concepts already explained
 
-None.
+The container is a composition and validation tool. Constructor injection remains the application contract; autowiring does not decide business policy or provider health. Shared mutable request state is unsafe, especially in long-running workers.
 
 ## Terminology established
 
-None.
+Service container, autowiring, autoconfiguration, alias, private service, lazy service, decorator, compiler pass, composition boundary.
 
 ## Examples used
 
-None.
+An invoice sender, YAML service configuration and alias, a container smoke test, and service-lifetime guidance.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 185 — Dependency Injection](../../volumes/12-design-and-patterns/185-dependency-injection.md)
+- [Chapter 220 — Symfony HttpKernel](../../volumes/14-laravel-and-symfony/220-symfony-httpkernel.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 220 — Symfony HttpKernel: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XIV proofread. Symfony container guidance links to official documentation.

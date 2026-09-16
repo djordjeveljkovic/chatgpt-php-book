@@ -1,41 +1,34 @@
 # AI Summary — Chapter 212 — Laravel Container
 
-- Status: planned
+- Status: complete
 - Volume: Volume 14 — LARAVEL AND SYMFONY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Covers automatic resolution, bindings, lifetimes, interfaces, contextual bindings, tags, factories, decoration, application boundaries, container testing, configuration, and security.
 
 ## Concepts already explained
 
-None.
+The container is a composition and lifetime mechanism, not a universal service locator. Use constructor injection, bind meaningful contracts, choose lifetimes from ownership, keep binding closures cheap, and validate configuration.
 
 ## Terminology established
 
-None.
+Automatic resolution, binding, singleton, scoped lifetime, transient, contextual binding, tag, decoration, composition boundary.
 
 ## Examples used
 
-None.
+InvoiceService constructor injection, ApplicationServiceProvider bindings, PaymentGateway binding, lifetime choices, and smoke bootstrap testing.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 209 — What Frameworks Actually Do](../../volumes/14-laravel-and-symfony/209-what-frameworks-actually-do.md)
+- [Chapter 211 — Laravel Request Lifecycle](../../volumes/14-laravel-and-symfony/211-laravel-request-lifecycle.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 213 — Symfony Overview: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; Laravel container, providers, configuration, PHP, and PHP-FIG references use version-neutral URLs.
