@@ -6,7 +6,7 @@ Volume XX — Senior Engineering
 
 ## Current Chapter
 
-Chapter 291 — Debugging Production
+Chapter 292 — Performance Investigation
 
 ## Current Section
 
@@ -138,6 +138,8 @@ Chapter 289 adds architecture review as responsibility allocation, architecture 
 
 Chapter 290 adds technical debt as a managed future obligation, principal/interest/risk-premium reasoning, debt classification and registers, evidence-based prioritization, PHP compatibility, data/schema, test, architecture, dependency, security, performance, and operational debt, repayment strategies, containment and retirement decisions, guardrails, and a production-debugging handoff.
 
+Chapter 291 adds production debugging as controlled learning under pressure, stabilization before diagnosis, impact scope, evidence preservation, factual timelines, hypothesis loops, metrics/logs/traces correlation, PHP-FPM/CLI/worker diagnostics, database/cache/queue/provider investigation, unknown completion, safe experiments, compatible recovery, incident communication, investigation handoffs, and a case study.
+
 ## Cross-References
 
 The opening section links to the official PHP Manual introduction, basic syntax, and language reference. Volumes IV–V cross-reference PHP internals, memory, runtime, workers, and configuration. Chapters 72–91 link to relevant PHP Manual array, memory, generator, random-number, sorting, searching, stack, queue, object storage, garbage collection, SPL heap, priority-queue, date-time, monotonic-clock, PDO transaction, and `array_key_exists()` references, plus primary streaming-algorithm papers. Chapters 92–98 link to official Composer CLI/schema/source documentation, SemVer, PHP autoloading, PHP-FIG PSR-4, Composer ClassLoader, and PSR-4 sources. Chapter 99 links to current PHP-FIG mission/bylaws, PSR workflow/amendments/voting, participation, FAQ, status index, and RFC 2119. Chapters 100–101 link to official PHP-FIG PSR/PER indexes and specifications, the PHP Manual, and PHPStan/Psalm documentation. Chapters 102–103 link to PHP-FIG style texts, PHP-CS-Fixer, PHP_CodeSniffer, Rector, the PHP Manual, and Chapter 272 on characterization testing. The book outline and authoring rules remain defined in [SKELETON.md](../../SKELETON.md) and [AI_AUTHORING_GUIDE.md](../../AI_AUTHORING_GUIDE.md).
@@ -148,19 +150,19 @@ Chapters 120–123 link to official Doctrine/PDO/PostgreSQL/MySQL documentation.
 
 ## Open Threads
 
-- Continue Volume XX with Chapter 291 on Debugging Production, carrying forward the technical-debt, architecture-review, code-review, runtime, architecture, characterization, refactoring, framework, database, version-migration, case-study, reservation-service, rate-limiter, URL-shortener, file-importer, queue-worker, notification-dispatcher, cache-backed-service, and search/filtering evidence developed in Chapters 270–290.
+- Continue Volume XX with Chapter 292 on Performance Investigation, carrying forward the production-debugging, technical-debt, architecture-review, code-review, runtime, architecture, characterization, refactoring, framework, database, version-migration, case-study, reservation-service, rate-limiter, URL-shortener, file-importer, queue-worker, notification-dispatcher, cache-backed-service, and search/filtering evidence developed in Chapters 270–291.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 291 — Debugging Production: the Why This Matters section.
+Chapter 292 — Performance Investigation: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–287 are complete. Volume XX Chapters 288–290 are complete. Continue with Chapter 291, following the senior-engineering outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–287 are complete. Volume XX Chapters 288–291 are complete. Continue with Chapter 292, following the senior-engineering outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
 
-Chapters 236–290 are complete. Continue with Chapter 291 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–291 are complete. Continue with Chapter 292 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -262,6 +264,8 @@ For Chapter 288, the source had no executable PHP blocks. Local Markdown links a
 For Chapter 289, the source contains no executable PHP blocks; its examples are text and ADR templates. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter was independently proofread for architecture/code-review distinction, ownership, data and effect boundaries, security, runtime and capacity, migration, rollback, fitness evidence, and the Chapter 290 handoff. Live architecture-review, database, deployment, and production integrations were not run.
 
 For Chapter 290, the source contains structured text templates and no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter was independently proofread for debt classification, principal/interest reasoning, PHP compatibility, data and migration safety, security and operational priority, repayment versus containment, and the Chapter 291 handoff. Live migration, dependency, database, deployment, and production integrations were not run.
+
+For Chapter 291, PHP 8.5.10 linted 1 PHP example, local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter was independently proofread for stabilization, evidence preservation, hypothesis testing, PHP/runtime limits, database/cache/queue/provider diagnosis, unknown completion, recovery, communication, and the Chapter 292 handoff. Live production, database, queue, provider, and deployment integrations were not run.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
