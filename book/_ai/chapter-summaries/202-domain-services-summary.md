@@ -1,41 +1,38 @@
 # AI Summary — Chapter 202 — Domain Services
 
-- Status: planned
+- Status: complete
 - Volume: Volume 13 — ARCHITECTURE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains domain services as cohesive domain policies without a natural entity owner, entity behavior, application-service boundaries, explicit time and external facts, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Domain services express domain decisions in domain language and should remain independent of HTTP and persistence. They do not provide transaction atomicity; application and database boundaries enforce authorization and consistency.
 
 ## Terminology established
 
-None.
+Domain service, domain policy, aggregate, domain port, application service, invariant.
 
 ## Examples used
 
-None.
+Pricing policy, account transfer, currency conversion, and explicit external-rate ports.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 200 — Aggregates](../../volumes/13-architecture/200-aggregates.md)
+- [Chapter 204 — Application Services](../../volumes/13-architecture/204-application-services.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 203 — Domain Events: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XIII proofread. Domain-model guidance links to Fowler and PHP documentation.

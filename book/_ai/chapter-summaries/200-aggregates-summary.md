@@ -1,41 +1,36 @@
 # AI Summary — Chapter 200 — Aggregates
 
-- Status: planned
+- Status: complete
 - Volume: Volume 13 — ARCHITECTURE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Aggregates define consistency boundaries around roots, entities, and value objects. The chapter covers root commands, invariant scope, concurrency, size, read models, events, reconstitution, deletion, testing, and operations.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+Aggregate root, consistency boundary, invariant, command, projection, optimistic version, lock, bounded collection, outbox event, and eventual consistency.
 
 ## Examples used
 
-None.
+A PHP Order aggregate, order lines, confirmation rules, and versioned persistence.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 197 — Domain-Driven Design](../../volumes/13-architecture/197-domain-driven-design.md)
+- [Chapter 198 — Entities](../../volumes/13-architecture/198-entities.md)
+- [Chapter 201 — Repositories](../../volumes/13-architecture/201-repositories.md)
+- [Chapter 136 — Webhooks](../../volumes/09-http-and-application-development/136-webhooks.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 201 on persistence contracts around aggregates and read models.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 201 — Repositories: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; live database and queue tests were not run.

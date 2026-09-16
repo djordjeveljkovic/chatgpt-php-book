@@ -1,41 +1,38 @@
 # AI Summary — Chapter 204 — Application Services
 
-- Status: planned
+- Status: complete
 - Volume: Volume 13 — ARCHITECTURE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains application services as use-case coordinators, typed commands and results, authorization context, transaction and external-effect boundaries, idempotency, error mapping, testing, operations, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Application services coordinate domain objects, repositories, transactions, events, and ports. They should not own domain rules or hold slow external calls inside local transactions. Concurrent idempotency requires a database or durable uniqueness boundary.
 
 ## Terminology established
 
-None.
+Application service, use-case handler, command, result model, transaction boundary, idempotency scope, outbox.
 
 ## Examples used
 
-None.
+A `PlaceOrder` command, receipt result, and handler coordinating authorization, repository persistence, idempotency, and events.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 202 — Domain Services](../../volumes/13-architecture/202-domain-services.md)
+- [Chapter 203 — Domain Events](../../volumes/13-architecture/203-domain-events.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 205 — Event-Driven Architecture: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XIII proofread. Application-service guidance links to Fowler and PHP documentation.

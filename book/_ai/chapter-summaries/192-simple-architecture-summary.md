@@ -1,41 +1,34 @@
 # AI Summary — Chapter 192 — Simple Architecture
 
-- Status: planned
+- Status: complete
 - Volume: Volume 13 — ARCHITECTURE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Covers a small explicit request path, composition roots, domain and infrastructure boundaries, criteria for adding abstractions, failure recovery, and evidence-driven growth.
 
 ## Concepts already explained
 
-None.
+Simple architecture is explicit and reliable rather than merely small. Transactions, constraints, idempotency, outbox records, timeouts, and authorization still belong in a simple application.
 
 ## Terminology established
 
-None.
+Composition root, application service, explicit dependency, failure matrix, outbox, evidence-driven architecture.
 
 ## Examples used
 
-None.
+CreateNote command, NoteRepository port, request path, and create-order failure analysis.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 177 — Coupling](../../volumes/12-design-and-patterns/177-coupling.md)
+- [Chapter 193 — Layered Architecture](../../volumes/13-architecture/193-layered-architecture.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 193 — Layered Architecture: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; PHP and Martin Fowler references are linked.

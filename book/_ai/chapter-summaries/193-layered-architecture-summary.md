@@ -1,41 +1,34 @@
 # AI Summary — Chapter 193 — Layered Architecture
 
-- Status: planned
+- Status: complete
 - Volume: Volume 13 — ARCHITECTURE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains presentation, application, domain, and infrastructure layers; dependency direction; mapping; transaction ownership; failure and security boundaries; architecture testing; and trade-offs with vertical slices.
 
 ## Concepts already explained
 
-None.
+Layers are meaningful only when dependency direction and contracts are enforced. Keep framework and persistence details at the edges and map errors to stable outcomes.
 
 ## Terminology established
 
-None.
+Presentation layer, application layer, domain layer, infrastructure layer, dependency direction, boundary leakage, architecture test.
 
 ## Examples used
 
-None.
+RegisterAccount command and handler, request flow, transaction policy, and error mapping.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 192 — Simple Architecture](../../volumes/13-architecture/192-simple-architecture.md)
+- [Chapter 195 — Hexagonal Architecture](../../volumes/13-architecture/195-hexagonal-architecture.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 194 — Modular Monolith: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; PHP-FIG and Martin Fowler references are linked.

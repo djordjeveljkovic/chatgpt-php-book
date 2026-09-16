@@ -1,41 +1,34 @@
 # AI Summary — Chapter 196 — Clean Architecture
 
-- Status: planned
+- Status: complete
 - Volume: Volume 13 — ARCHITECTURE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Covers entities, use cases, interface adapters, frameworks and drivers, dependency direction, model mapping, transactions, security, architecture checks, and test levels.
 
 ## Concepts already explained
 
-None.
+Clean Architecture points dependencies inward. Separate request, command, entity, persistence, and response models where their contracts differ; keep ports narrow and outer details replaceable.
 
 ## Terminology established
 
-None.
+Clean Architecture, dependency rule, entity, use case, interface adapter, driver, port, ring theater, model mapping.
 
 ## Examples used
 
-None.
+CreateInvoice command, InvoiceStore port, use case, package structure, and architecture testing.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 195 — Hexagonal Architecture](../../volumes/13-architecture/195-hexagonal-architecture.md)
+- [Chapter 194 — Modular Monolith](../../volumes/13-architecture/194-modular-monolith.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 197 — Domain-Driven Design: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; Clean Architecture, Hexagonal Architecture, and PHP namespace references are linked.

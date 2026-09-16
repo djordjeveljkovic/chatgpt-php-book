@@ -1,41 +1,34 @@
 # AI Summary — Chapter 195 — Hexagonal Architecture
 
-- Status: planned
+- Status: complete
 - Volume: Volume 13 — ARCHITECTURE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains primary and secondary ports, adapters, composition roots, narrow capabilities, contract tests, transactions, outbox, provider idempotency, and failure translation.
 
 ## Concepts already explained
 
-None.
+Hexagonal architecture keeps core policy independent from external technology. Ports clarify dependency direction, while adapters own protocol translation and infrastructure failures.
 
 ## Terminology established
 
-None.
+Hexagonal architecture, Ports and Adapters, driving port, driven port, adapter, composition root, contract test.
 
 ## Examples used
 
-None.
+PlaceOrder driving and driven ports, service implementation, adapter responsibilities, and outbox recovery.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 193 — Layered Architecture](../../volumes/13-architecture/193-layered-architecture.md)
+- [Chapter 196 — Clean Architecture](../../volumes/13-architecture/196-clean-architecture.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 196 — Clean Architecture: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; Alistair Cockburn, PHP-FIG, and PHP references are linked.

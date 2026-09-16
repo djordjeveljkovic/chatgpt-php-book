@@ -1,41 +1,35 @@
 # AI Summary — Chapter 198 — Entities
 
-- Status: planned
+- Status: complete
 - Volume: Volume 13 — ARCHITECTURE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Entities represent identity-bearing domain concepts with lifecycle and behavior. The chapter covers identity scope, equality, invariant-preserving methods, creation and reconstitution, persistence mapping, aggregate ownership, optimistic versions, and testing.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+Entity identity, equality, lifecycle, creation, reconstitution, invariant, aggregate root, optimistic version, and explicit mapping.
 
 ## Examples used
 
-None.
+PHP ReservationId and Reservation identity, Account transitions, Subscription reconstitution, and versioned documents.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 197 — Domain-Driven Design](../../volumes/13-architecture/197-domain-driven-design.md)
+- [Chapter 199 — Value Objects](../../volumes/13-architecture/199-value-objects.md)
+- [Chapter 200 — Aggregates](../../volumes/13-architecture/200-aggregates.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 199 on immutable value-based concepts.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 199 — Value Objects: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; persistence and concurrency integration tests were not run.
