@@ -1,41 +1,38 @@
 # AI Summary — Chapter 187 — Creational Patterns
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains named constructors, factory methods, builders, abstract factories, singleton risks, cloning, validation, testing, operations, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Creational patterns are justified by construction policy, invariant protection, implementation selection, or compatible object families. Prefer the smallest clear mechanism, keep creation explicit, and avoid global mutable singletons.
 
 ## Terminology established
 
-None.
+Named constructor, factory method, builder, abstract factory, product family, composition root, singleton.
 
 ## Examples used
 
-None.
+A validated `Money` named constructor, payment-method factory, HTTP client builder, and platform factory interfaces.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 185 — Dependency Injection](../../volumes/12-design-and-patterns/185-dependency-injection.md)
+- [Chapter 188 — Structural Patterns](../../volumes/12-design-and-patterns/188-structural-patterns.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 188 — Structural Patterns: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XII proofread. Pattern references link to PHP and established pattern references.

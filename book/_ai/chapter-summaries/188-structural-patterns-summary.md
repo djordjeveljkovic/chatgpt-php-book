@@ -1,41 +1,38 @@
 # AI Summary — Chapter 188 — Structural Patterns
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains adapters, decorators, facades, composites, proxies, contract preservation, composition, retries, failure aggregation, observability, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Structural patterns solve concrete composition and boundary problems. Adapters translate, decorators add policy, facades coordinate, and composites/proxies need explicit failure, cost, and latency semantics. Narrow interfaces and composition reduce accidental coupling.
 
 ## Terminology established
 
-None.
+Adapter, decorator, facade, composite, proxy, contract preservation, wrapper ordering, hidden I/O.
 
 ## Examples used
 
-None.
+A vendor mail adapter, metered mail decorator, checkout facade, and composite notifier.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 187 — Creational Patterns](../../volumes/12-design-and-patterns/187-creational-patterns.md)
+- [Chapter 189 — Behavioral Patterns](../../volumes/12-design-and-patterns/189-behavioral-patterns.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 189 — Behavioral Patterns: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XII proofread. Pattern references link to PHP documentation, Fowler, and Refactoring.Guru.

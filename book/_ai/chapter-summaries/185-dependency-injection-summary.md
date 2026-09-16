@@ -1,41 +1,38 @@
 # AI Summary — Chapter 185 — Dependency Injection
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains explicit dependencies, constructor injection, composition roots, containers versus service locators, lifetimes, mutable state, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Dependency injection makes collaborators and object lifetimes explicit. Compose graphs at application boundaries, keep containers out of business logic, use interfaces at meaningful boundaries, and combine substitutable unit tests with real adapter checks.
 
 ## Terminology established
 
-None.
+Dependency injection, hidden dependency, composition root, service locator, object lifetime, null object.
 
 ## Examples used
 
-None.
+An invoice service with repository and mailer ports, composition-root wiring, a null mailer, and in-memory test collaborators.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 184 — YAGNI](../../volumes/12-design-and-patterns/184-yagni.md)
+- [Chapter 186 — Abstraction](../../volumes/12-design-and-patterns/186-abstraction.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 186 — Abstraction: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XII proofread. Dependency-injection guidance links to PHP-FIG and Fowler.

@@ -1,41 +1,35 @@
 # AI Summary — Chapter 182 — DRY
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+DRY is explained as centralizing knowledge rather than mechanically removing similar lines. The chapter covers domain-rule ownership, database constraints, abstraction cost, generated artifacts, configuration, deliberate duplication, safe refactoring, and drift tests.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+Duplicated knowledge, authoritative source, deliberate duplication, generated artifact, boundary contract, database-owned invariant, and abstraction coupling.
 
 ## Examples used
 
-None.
+Status labels, a reservation policy enum, configuration relationships, and shared-rule refactoring steps.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 178 — Cohesion](../../volumes/12-design-and-patterns/178-cohesion.md)
+- [Chapter 181 — SOLID](../../volumes/12-design-and-patterns/181-solid.md)
+- [Chapter 183 — KISS](../../volumes/12-design-and-patterns/183-kiss.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 183 on evaluating total system complexity.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 183 — KISS: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; generated schema workflows were not run.

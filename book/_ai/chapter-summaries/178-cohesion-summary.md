@@ -1,41 +1,34 @@
 # AI Summary — Chapter 178 — Cohesion
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Covers cohesive responsibilities, change reasons, domain value objects, module boundaries, transaction cohesion, low-cohesion warning signs, refactoring, and testing.
 
 ## Concepts already explained
 
-None.
+Cohesion groups data, rules, and changes around a meaningful responsibility. Class size alone does not determine cohesion; shared invariants and change reasons do.
 
 ## Terminology established
 
-None.
+Cohesion, reason to change, invariant, module boundary, anemic domain, god service, transaction cohesion.
 
 ## Examples used
 
-None.
+Money value object, module API review, and a cohesive command/transaction boundary.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 177 — Coupling](../../volumes/12-design-and-patterns/177-coupling.md)
+- [Chapter 181 — SOLID](../../volumes/12-design-and-patterns/181-solid.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 179 — Encapsulation: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; PHP and architecture references are linked.

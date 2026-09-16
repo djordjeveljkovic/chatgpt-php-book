@@ -1,41 +1,38 @@
 # AI Summary — Chapter 186 — Abstraction
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains useful versus leaky abstractions, stable concepts, interfaces, abstract classes, value objects, ports and adapters, abstraction cost, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+An abstraction reduces caller decisions while preserving important failure and cost semantics. Keep contracts narrow and typed, translate vendor details at adapters, and use value objects for invariants rather than adding needless interfaces.
 
 ## Terminology established
 
-None.
+Abstraction, leaky abstraction, port, adapter, value object, contract, interface segregation.
 
 ## Examples used
 
-None.
+Fraud and payment ports, a validated `Money` value object, and a provider adapter translating external responses.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 185 — Dependency Injection](../../volumes/12-design-and-patterns/185-dependency-injection.md)
+- [Chapter 187 — Creational Patterns](../../volumes/12-design-and-patterns/187-creational-patterns.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 187 — Creational Patterns: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XII proofread. Abstraction guidance links to PHP documentation and Fowler.

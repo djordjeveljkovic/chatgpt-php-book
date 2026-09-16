@@ -1,41 +1,35 @@
 # AI Summary — Chapter 184 — YAGNI
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+YAGNI is presented as evidence-driven scope control. The chapter covers current contracts, necessary seams, speculative features, cost and security, data/API design, reversible decisions, feedback loops, and maintenance.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+YAGNI, necessary seam, speculative feature, reversible decision, vertical slice, feature-flag lifecycle, compatibility cost, and evidence-driven scope.
 
 ## Examples used
 
-None.
+A focused reservation notifier and guidance for justified provider seams, security controls, and feature flags.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 181 — SOLID](../../volumes/12-design-and-patterns/181-solid.md)
+- [Chapter 183 — KISS](../../volumes/12-design-and-patterns/183-kiss.md)
+- [Chapter 185 — Dependency Injection](../../volumes/12-design-and-patterns/185-dependency-injection.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 185 on dependency injection.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 185 — Dependency Injection: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; product-specific rollout metrics were not run.

@@ -1,41 +1,34 @@
 # AI Summary — Chapter 177 — Coupling
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains necessary versus accidental coupling, dependency direction, ports and adapters, composition roots, typed data boundaries, shared database coupling, temporal/failure coupling, events, and testing.
 
 ## Concepts already explained
 
-None.
+Coupling should follow stable contracts and explicit ownership. Timeouts, retries, transactions, and event schemas are part of dependency contracts.
 
 ## Terminology established
 
-None.
+Coupling, port, adapter, composition root, temporal coupling, failure coupling, service locator, event schema.
 
 ## Examples used
 
-None.
+PaymentGateway port, checkout service, explicit construction, outbox/event decisions, and dependency-graph review.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 159 — Unit Tests](../../volumes/11-testing/159-unit-tests.md)
+- [Chapter 185 — Dependency Injection](../../volumes/12-design-and-patterns/185-dependency-injection.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 178 — Cohesion: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; PHP, PHP-FIG, and Martin Fowler references are linked.

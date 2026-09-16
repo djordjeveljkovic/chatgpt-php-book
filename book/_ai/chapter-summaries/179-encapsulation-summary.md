@@ -1,41 +1,34 @@
 # AI Summary — Chapter 179 — Encapsulation
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains invariants, private state, commands and queries, collections, aggregates, persistence mapping, module APIs, hydration, transaction boundaries, and security implications.
 
 ## Concepts already explained
 
-None.
+Encapsulation exposes meaningful operations instead of arbitrary setters, but it is not authorization or atomicity. Database constraints and all entry points must reinforce object invariants.
 
 ## Terminology established
 
-None.
+Encapsulation, invariant, command, query, aggregate, reconstitution, persistence mapping, leaky DTO.
 
 ## Examples used
 
-None.
+Encapsulated Reservation with cancel operation, aggregate boundary, and state-transition policy.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 131 — Authorization](../../volumes/09-http-and-application-development/131-authorization.md)
+- [Chapter 180 — Immutability](../../volumes/12-design-and-patterns/180-immutability.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 180 — Immutability: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; PHP visibility, aggregate, and OWASP references are linked.

@@ -1,41 +1,34 @@
 # AI Summary — Chapter 180 — Immutability
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Covers value objects, readonly properties/classes, normalization, persistent updates, DateTimeImmutable, shallow versus deep immutability, serialization, caching, concurrency, and testing.
 
 ## Concepts already explained
 
-None.
+Readonly prevents reassignment but does not make nested objects deeply immutable. Local immutable values help with aliasing and retries, while database state still needs transactions, versions, and idempotency.
 
 ## Terminology established
 
-None.
+Immutability, readonly, value object, persistent update, aliasing, deep immutability, immutable snapshot, reconstitution.
 
 ## Examples used
 
-None.
+EmailAddress normalization, RetryPolicy persistent update, DateTimeImmutable, immutable event DTOs, and ownership boundaries.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 179 — Encapsulation](../../volumes/12-design-and-patterns/179-encapsulation.md)
+- [Chapter 141 — Idempotency](../../volumes/09-http-and-application-development/141-idempotency.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 181 — SOLID: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; readonly, DateTimeImmutable, and PHP runtime references are linked.

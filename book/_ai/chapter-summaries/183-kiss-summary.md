@@ -1,41 +1,35 @@
 # AI Summary — Chapter 183 — KISS
 
-- Status: planned
+- Status: complete
 - Volume: Volume 12 — DESIGN AND PATTERNS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+KISS evaluates simplicity at the system boundary. The chapter covers explicit requirements, complexity budgets, data flow, failure behavior, data structures, abstraction, configuration, and test-layer choices.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+Necessary complexity, accidental complexity, explicit data flow, complexity budget, failure policy, operational simplicity, and boundary-appropriate testing.
 
 ## Examples used
 
-None.
+A direct status mapping and a typed tax calculator with explicit rounding and validation.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 177 — Coupling](../../volumes/12-design-and-patterns/177-coupling.md)
+- [Chapter 181 — SOLID](../../volumes/12-design-and-patterns/181-solid.md)
+- [Chapter 184 — YAGNI](../../volumes/12-design-and-patterns/184-yagni.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 184 on evidence-driven scope control.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 184 — YAGNI: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; performance measurements were not run.
