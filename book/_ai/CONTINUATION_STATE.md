@@ -6,7 +6,7 @@ Volume XVII — Production Engineering
 
 ## Current Chapter
 
-Chapter 263 — Health Checks
+Chapter 264 — Deployment
 
 ## Current Section
 
@@ -14,7 +14,7 @@ The Why This Matters section.
 
 ## Completed Material
 
-Volume XVII Chapters 256–261 are complete through production PHP-FPM pools, containers, configuration, secrets, logging, and metrics. These chapters establish process and pool lifecycle, resource and artifact limits, typed runtime configuration, secret rotation, structured operational evidence, quantitative signals, bounded metric dimensions, and production access controls.
+Volume XVII Chapters 256–263 are complete through production PHP-FPM pools, containers, configuration, secrets, logging, metrics, and health checks. These chapters establish process and pool lifecycle, resource and artifact limits, typed runtime configuration, secret rotation, structured operational evidence, quantitative signals, bounded metric dimensions, health-state contracts, and production access controls.
 
 Volume XVI Chapters 251–253 are complete through eventual consistency, CAP, and service boundaries. Volume XVII Chapters 254–255 are complete through Linux process and resource boundaries and Nginx routing, FastCGI, limits, buffering, TLS, caching, and observability.
 
@@ -49,6 +49,8 @@ Lock-backed application install, library development lock, `packages`/`packages-
 
 Trace, span, trace ID, span ID, span kind, parent span, span link, trace context, carrier, propagation, server/client/producer/consumer/internal span, span status, span event, sampling, current context, exporter failure, clock skew, and trace completeness.
 
+Startup check, liveness check, readiness check, deep diagnostic, health contract, health state, degraded state, unknown state, dependency depth, readiness policy, probe caller, probe fan-out, health freshness, drain state, probe amplification, check hysteresis, and capability-specific readiness.
+
 ## Terminology Established
 
 Pool capacity, upstream evidence, old-worker age, runtime directory, termination boundary, effective limit, foreground process, durable storage boundary, configuration schema, effective source, flag expiry, role/environment matrix, secret inventory, verification overlap, key ID, propagation time, stable event name, log cardinality, failure category, audit boundary, measurement boundary, metric contract, bounded dimension, queryable signal, observed population, counter reset, normalized query fingerprint, collection health, and metric capacity budget.
@@ -73,6 +75,8 @@ Large-dataset export, streaming query, chunking, ORM identity map, lazy/eager lo
 
 Causal path, meaningful span boundary, context carrier, propagation boundary, diagnostic workflow, representative trace, sampled absence, logical-versus-physical work, bounded span attribute, trace retention boundary, and observability evidence boundary.
 
+Health control loop, startup budget, shallow liveness, readiness capability, dependency policy, diagnostic surface, probe freshness window, bounded health response, health-state transition, and probe capacity budget.
+
 ## Examples Used
 
 FPM process and pool diagrams, pool sizing and timeout relationships, image/runtime diagram, conceptual PHP multi-stage Dockerfile, typed AppConfig parser, SecretProvider and ApiSigner, rotation timeline, structured JSON event, typed Logger and redact helper, release promotion, and production failure drills.
@@ -87,6 +91,8 @@ A network-path diagram, typed invoice gateway and billing client, serial and par
 
 A finite-resource scaling diagram, a workload-specific scaling table, an idealized connection-capacity estimate, a typed `requiredWorkers()` PHP function, read-replica and sharding trade-offs, cache and queue scaling guidance, overload policies, and mixed-version deployment tests. Chapters 260–261 add structured JSON logging, redaction, request metrics, queue metrics, a typed `MetricSink`, bounded metric attributes, and cardinality estimation. Chapter 262 adds trace trees, HTTP and queue propagation, typed Span and Tracer boundaries, exception-safe span lifecycle, nested checkout/billing spans, retry-attempt spans, sampling policies, and signal correlation.
 
+Chapter 263 adds startup/liveness/readiness/diagnostic probe diagrams, typed HealthState, HealthResult, HealthCheck, ReadinessPolicy, required-versus-optional DependencyPolicy, probe fan-out analysis, graceful drain, and health-check test scenarios.
+
 A minimal strict-types program that writes a message; a conceptual browser/web-server/PHP-FPM/application/dependency path; source-to-execution and lifecycle diagrams; runtime and worker examples from Volumes IV–V; duplicate detection, customer indexing, iterable duplicate reporting, Big O comparisons, whole-file versus streaming transformations, safe map indexing, grouped records, scalar sets, authorization permission sets, object-identity visited sets, mixed-delimiter validation with a stack, undo/redo history, PHP array and `SplStack` examples, compacting head-index queue, `SplQueue`, breadth-first graph traversal, in-process email-job buffer, comparison-flag sorting, key-preserving versus reindexing sorts, composite task sorting, `array_multisort()`, decorate-sort-undecorate, strict value searches, key-zero search results, nullable-key presence, repeated-search customer index, PHP/database sorting and searching trade-offs, integer lower/upper-bound functions, comparator-based boundary search, shipping-tier lookup, recursive and iterative tree traversals, nested-array and node-object hierarchies, flat parent-ID indexing, category-menu rendering, zero-indexed min-heap representation, SPL min/max heaps, streamed top-k selection, timestamp-and-sequence scheduling, `SplPriorityQueue` extraction modes, stable equal-priority ordering, clone-before-drain inspection, PHP adjacency-list graph, shortest path by edge count, iterative directed-cycle detection, half-open overlap and containment helpers, sorted interval union, sweep-line endpoint ordering, heap-based resource allocation, fixed-window sums, monotonic-ring sliding maxima, variable-count two-pointer range, event-time expiration, bounded batch insertion, per-batch transaction, length-prefixed memo key, memoized DAG critical path with cycle detection, reverse-topological tabulation, exact stream min/max/count, deterministic reservoir sampling, bounded Misra–Gries frequent-item candidates, Count-Min guarantee sizing, an ID map plus deterministic timestamp ordering for a bounded event snapshot, Composer lifecycle and package workflow, `vendor/autoload.php` bootstrap, platform and audit checks, dependency-constraint intersection, Composer platform requirements, offline compatible/incompatible graph fixtures, and a validated application `composer.json` with runtime/dev requirements and scripts, lock inspection and merge fixtures, Composer constraint assertions, a two-file SPL autoloader, PSR-4 root/nested class loading and case checks, and a PHP-FIG `NotificationSender` contract example. Also, a PHP-FIG catalog organized by domain and status, an `InvoiceAudit` service with injected logger and clock contracts, a PHPDoc-shaped record list, a generic `firstOrNull()` helper, project-local PHPStan/Psalm CLI examples, and examples contrasting real validation, stubs, and narrow diagnostic suppressions. Chapters 102–103 add PHP-CS-Fixer PER-CS configuration, `.editorconfig` and Composer format scripts, separate formatter check/fix workflows, and a scoped Rector property-typing rule with dry-run migration practices. Chapters 104–119 add SQL schema/query examples, PDO connection and fetch examples, prepared statements and dynamic allow-lists, query-grain and `EXISTS` examples, index and `EXPLAIN` analysis, join/aggregation queries, PDO transaction and outbox examples, isolation anomalies, lock and deadlock retry wrappers, atomic concurrency updates, and offset/keyset pagination with signed cursors. Chapters 136–151 add signed webhook delivery, SSE framing, WebSocket lifecycle, token-bucket and rate-limit decisions, API-version contracts, idempotency records, threat-model maps, strict input parsing, prepared SQL, context-specific HTML escaping, CSRF token verification, SSRF named endpoints, controlled process execution, path containment, upload quarantine, and bounded JSON/native serialization handling. Chapters 152–157 add password hashing and reset flows, session rotation and cookie policy, object-level authorization, secret inventory and redaction, Composer advisory handling, lock-backed dependency policy, build provenance, SBOMs, and artifact verification. Chapters 158–169 add test scope and oracles, PHPUnit unit/integration/feature/API/end-to-end examples, contract checks, and mock, stub, fake, and spy trade-offs. Chapters 170–176 add test design, coverage interpretation, mutation testing, generated properties, flaky-test diagnosis, legacy characterization seams, and isolated database integration testing. Chapters 177–188 add coupling and cohesion analysis, encapsulation and immutability, SOLID/DRY/KISS/YAGNI trade-offs, dependency injection, abstraction boundaries, and creational/structural pattern examples. Chapters 189–191 add behavioral patterns, enterprise patterns, and anti-pattern diagnosis with incremental refactoring guidance. Chapters 192–208 add architecture boundaries, modular and hexagonal designs, domain modeling, repositories and services, event-driven flows, distributed-system trade-offs, microservice boundaries, and criteria for retaining a modular monolith. Chapters 209–222 add framework responsibilities, Laravel request/container/middleware/ORM/queue/testing examples, Symfony components, dependency injection, HttpKernel, Messenger, and framework-selection guidance. Chapters 223–234 add performance models, measurement and profiling, CPU/memory/database/HTTP analysis, runtime tuning, FPM capacity, caching, and queue throughput.
 
 ## Cross-References
@@ -99,19 +105,19 @@ Chapters 120–123 link to official Doctrine/PDO/PostgreSQL/MySQL documentation.
 
 ## Open Threads
 
-- Continue Volume XVII with Chapter 263 on health checks, carrying forward explicit contracts, finite capacity, deadlines, durable messages, process limits, metric and trace correlation, and operational evidence.
+- Continue Volume XVII with Chapter 264 on deployment, carrying forward explicit contracts, finite capacity, deadlines, durable messages, process limits, metric and trace correlation, and operational evidence.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 263 — Health Checks: the Why This Matters section.
+Chapter 264 — Deployment: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–262 are complete. Continue with Chapter 263, following the production-engineering outline and preserving the distinction between local implementation, process limits, network boundaries, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–263 are complete. Continue with Chapter 264, following the production-engineering outline and preserving the distinction between local implementation, process limits, network boundaries, and operational behavior.
 
-Chapters 236–262 are complete. Continue with Chapter 263 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–263 are complete. Continue with Chapter 264 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -158,6 +164,8 @@ For Chapters 256–260, PHP 8.5.10 linted 4 PHP examples, local Markdown links r
 For Chapter 261, PHP 8.5.10 linted 3 PHP examples, local Markdown links resolved, and `git diff --check` passed. Metrics claims and examples were proofread for instrument meaning, aggregation across PHP-FPM workers, cardinality, bounded attributes, counter resets, unknown versus zero, retry accounting, collection overhead, database correlation, and safe metric labels. Live collector, exporter, queue, database, and PHP-FPM integration tests were not run.
 
 For Chapter 262, PHP 8.5.10 linted 2 PHP examples, local Markdown links resolved, and git diff --check passed. Tracing, propagation, sampling, and HTTP semantic-convention claims were checked against current official OpenTelemetry documentation on 2026-09-16. Span lifecycle, PHP-FPM and worker context, retries, queue boundaries, privacy, exporter failure, and clock-skew guidance were proofread. Live collector, exporter, queue, database, PHP-FPM, and framework integration tests were not run.
+
+For Chapter 263, PHP 8.5.10 linted 2 PHP examples, local Markdown links resolved, and git diff --check passed. PHP-FPM, FPM status/ping, Kubernetes probe, Nginx health-check, and FastCGI security claims were checked against current official documentation on 2026-09-16. Health-state policy, dependency fan-out, timeout boundaries, probe security, graceful drain, and unknown-versus-failed behavior were proofread. Live PHP-FPM, Nginx, database, orchestrator, dependency, and health-probe integrations were not run.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
