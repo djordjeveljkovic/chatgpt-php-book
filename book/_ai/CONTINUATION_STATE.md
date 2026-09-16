@@ -6,7 +6,7 @@ Volume XX — Senior Engineering
 
 ## Current Chapter
 
-Chapter 297 — Senior PHP Interview Questions
+Chapter 298 — PHP Version Matrix
 
 ## Current Section
 
@@ -158,21 +158,23 @@ Chapters 104–119 link to the PHP PDO manual, OWASP SQL-injection guidance, and
 
 Chapters 120–123 link to official Doctrine/PDO/PostgreSQL/MySQL documentation. Chapters 124–135 link to PHP, MDN, RFC 9110/9111/9457, Fielding's REST dissertation, and OWASP guidance for CSRF, uploads, APIs, authentication, and authorization. Chapters 136–141 link to PHP, MDN, RFCs, and OWASP guidance for webhooks, streaming, rate limits, API evolution, and idempotency. Chapters 142–157 link to PHP, CWE, OWASP, NIST, Composer, and SLSA guidance for application security, credentials, dependencies, and supply-chain controls. Chapters 152–157 also cross-reference the testing volume for verification and operational evidence. The book outline and authoring rules remain defined in [SKELETON.md](../../SKELETON.md) and [AI_AUTHORING_GUIDE.md](../../AI_AUTHORING_GUIDE.md).
 
+Chapter 297 adds a senior-interview reasoning framework covering requirement clarification, invariants, PHP runtime boundaries, data structures, databases, HTTP, security, testing, architecture, performance, production incidents, leadership judgment, evidence, observability, migration, rollout, recovery, an assessment rubric, an integrated search incident, exercises, review questions, and the Chapter 298 handoff.
+
 ## Open Threads
 
-- Continue Volume XX with Chapter 297 on Senior PHP Interview Questions, carrying forward the trade-off, technical-decision, incident-investigation, security-review, performance-investigation, production-debugging, technical-debt, architecture-review, code-review, runtime, architecture, characterization, refactoring, framework, database, version-migration, case-study, reservation-service, rate-limiter, URL-shortener, file-importer, queue-worker, notification-dispatcher, cache-backed-service, and search/filtering evidence developed in Chapters 270–296.
+- Continue Volume XXI with Chapter 298 on PHP Version Matrix, carrying forward the senior reasoning, runtime, compatibility, migration, trade-off, technical-decision, incident-investigation, security-review, performance-investigation, production-debugging, technical-debt, architecture-review, code-review, legacy, framework, database, case-study, reservation-service, and search/filtering evidence developed in Chapters 270–297.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 297 — Senior PHP Interview Questions: the Why This Matters section.
+Chapter 298 — PHP Version Matrix: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–287 are complete. Volume XX Chapters 288–296 are complete. Continue with Chapter 297, following the senior-engineering outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–287 are complete. Volume XX Chapters 288–297 are complete. Continue with Chapter 298, following the reference-volume outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, durable messages, partial failure, and operational behavior.
 
-Chapters 236–296 are complete. Continue with Chapter 297 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–297 are complete. Continue with Chapter 298 and preserve the distinction between local implementation, version-specific behavior, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -286,6 +288,8 @@ For Chapter 294, the source contains structured text investigation records and n
 For Chapter 295, the source contains structured text decision records and no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter was independently proofread for decision framing, uncertainty, options, evidence, reversibility, risk, ownership, communication, and the Chapter 296 handoff. Live decision workshops, migration, load, security, and deployment integrations were not run.
 
 For Chapter 296, the source contains illustrative text matrices and no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter was independently proofread for competing qualities, hard constraints, global attribution, reversibility, cost, security, correctness, PHP runtime concerns, and the Chapter 297 handoff. Live trade-off workshops, load, database, provider, and deployment integrations were not run.
+
+For Chapter 297, the source contains structured interview guidance and no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter received planning-agent review and a local editorial check for senior reasoning, PHP/runtime boundaries, invariants, trade-offs, failure and recovery, observability, security, migration, assessment, and the Chapter 298 handoff. Live interview, database, provider, deployment, and production integrations were not run.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
