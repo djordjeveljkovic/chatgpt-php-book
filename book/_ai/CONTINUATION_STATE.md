@@ -6,7 +6,7 @@ Volume XIX — Small Engineering Projects
 
 ## Current Chapter
 
-Chapter 281 — Rate Limiter
+Chapter 282 — URL Shortener
 
 ## Current Section
 
@@ -118,6 +118,8 @@ Chapter 279 adds the fictional Northstar Parts legacy order-portal case study, a
 
 Chapter 280 adds an incremental tennis reservation service, facility-local time and UTC instant modeling, half-open interval overlap, reservation policy and persistence ports, concurrent conflict enforcement, durable idempotency, authorization and validation boundaries, outbox notifications, concurrency and unknown-outcome tests, bounded contention metrics, and rollout/recovery exercises.
 
+Chapter 281 adds rate limiting as admission control, policy dimensions, fixed/sliding/token-bucket models, integer microtoken arithmetic, process and shared clocks, atomic shared-state updates, canonical identity keys, operation cost and fairness, HTTP semantics, fail-open/closed policy, storage-outage behavior, bounded metrics, and policy-version rollout exercises.
+
 ## Cross-References
 
 The opening section links to the official PHP Manual introduction, basic syntax, and language reference. Volumes IV–V cross-reference PHP internals, memory, runtime, workers, and configuration. Chapters 72–91 link to relevant PHP Manual array, memory, generator, random-number, sorting, searching, stack, queue, object storage, garbage collection, SPL heap, priority-queue, date-time, monotonic-clock, PDO transaction, and `array_key_exists()` references, plus primary streaming-algorithm papers. Chapters 92–98 link to official Composer CLI/schema/source documentation, SemVer, PHP autoloading, PHP-FIG PSR-4, Composer ClassLoader, and PSR-4 sources. Chapter 99 links to current PHP-FIG mission/bylaws, PSR workflow/amendments/voting, participation, FAQ, status index, and RFC 2119. Chapters 100–101 link to official PHP-FIG PSR/PER indexes and specifications, the PHP Manual, and PHPStan/Psalm documentation. Chapters 102–103 link to PHP-FIG style texts, PHP-CS-Fixer, PHP_CodeSniffer, Rector, the PHP Manual, and Chapter 272 on characterization testing. The book outline and authoring rules remain defined in [SKELETON.md](../../SKELETON.md) and [AI_AUTHORING_GUIDE.md](../../AI_AUTHORING_GUIDE.md).
@@ -128,19 +130,19 @@ Chapters 120–123 link to official Doctrine/PDO/PostgreSQL/MySQL documentation.
 
 ## Open Threads
 
-- Continue Volume XIX with Chapter 281 on the Rate Limiter, carrying forward the runtime, architecture, characterization, refactoring, framework, database, version-migration, case-study, and reservation-service evidence developed in Chapters 270–280.
+- Continue Volume XIX with Chapter 282 on the URL Shortener, carrying forward the runtime, architecture, characterization, refactoring, framework, database, version-migration, case-study, reservation-service, and rate-limiter evidence developed in Chapters 270–281.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 281 — Rate Limiter: the Why This Matters section.
+Chapter 282 — URL Shortener: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapter 280 is complete. Continue with Chapter 281, following the small-project outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–281 are complete. Continue with Chapter 282, following the small-project outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
 
-Chapters 236–280 are complete. Continue with Chapter 281 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–281 are complete. Continue with Chapter 282 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
