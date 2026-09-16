@@ -6,7 +6,7 @@ Volume XVIII — Legacy PHP
 
 ## Current Chapter
 
-Chapter 272 — Characterization Tests
+Chapter 273 — Safe Refactoring
 
 ## Current Section
 
@@ -14,7 +14,7 @@ The Why This Matters section.
 
 ## Completed Material
 
-Chapter 271 adds a legacy dependency graph, intended/static/observed architecture comparison, common legacy architecture shapes, hidden-coupling search surfaces, a dependency-evidence flow, responsibility/data/process/effect/ownership boundaries, a typed `ArchitectureEdge` enum and readonly `ArchitectureDependency` class, accidental and inward dependency-direction diagrams, transaction and ownership analysis, web/CLI/cron/queue comparison, bounded observability fields, an incremental change loop, migration-seam guidance, failure modes, and architectural exercises.
+Chapter 271 adds a legacy dependency graph, intended/static/observed architecture comparison, common legacy architecture shapes, hidden-coupling search surfaces, a dependency-evidence flow, responsibility/data/process/effect/ownership boundaries, a typed `ArchitectureEdge` enum and readonly `ArchitectureDependency` class, accidental and inward dependency-direction diagrams, transaction and ownership analysis, web/CLI/cron/queue comparison, bounded observability fields, an incremental change loop, migration-seam guidance, failure modes, and architectural exercises. Chapter 272 adds observation pipelines, test charters, observed-versus-required-versus-desired behavior, explicit oracles, typed observations, fixture and state control, negative paths, external-effect recording, golden masters, differential comparison, runtime limitations, confidence questions, and characterization exercises.
 
 Volume XVII Chapters 256–269 are complete through production PHP-FPM pools, containers, configuration, secrets, logging, metrics, health checks, deployment, rollback, CI/CD, backups, disaster recovery, and incident response. These chapters establish process and pool lifecycle, resource and artifact limits, typed runtime configuration, secret rotation, structured operational evidence, quantitative signals, bounded metric dimensions, health-state contracts, deployment artifacts, mixed-version compatibility, rollout evidence, rollback boundaries, recovery capability, pipeline evidence, artifact promotion, recovery points, RPO/RTO, restore validation, failure domains, continuity modes, failover/failback, fencing, incident command, containment, evidence preservation, and production access controls. Chapter 270 begins Volume XVIII with PHP 5 codebases as runtime, extension, dependency, configuration, application, data, deployment, and operations systems rather than merely old syntax.
 
@@ -103,6 +103,8 @@ A minimal strict-types program that writes a message; a conceptual browser/web-s
 
 Chapter 271 adds a legacy dependency graph, intended/static/observed architecture comparison, common legacy architecture shapes, hidden-coupling search surfaces, a dependency-evidence flow, responsibility/data/process/effect/ownership boundaries, a typed `ArchitectureEdge` enum and readonly `ArchitectureDependency` class, accidental and inward dependency-direction diagrams, transaction and ownership analysis, web/CLI/cron/queue comparison, bounded observability fields, an incremental change loop, migration-seam guidance, failure modes, and architectural exercises.
 
+Chapter 272 adds an observation pipeline, observed/required/desired behavior table, test charter, typed `Observation` and `normalizeObservation()` examples, fixture and state controls, negative-path cases, external-effect records, golden-master review steps, old/new differential comparison, runtime limitations, confidence questions, and characterization exercises.
+
 ## Cross-References
 
 The opening section links to the official PHP Manual introduction, basic syntax, and language reference. Volumes IV–V cross-reference PHP internals, memory, runtime, workers, and configuration. Chapters 72–91 link to relevant PHP Manual array, memory, generator, random-number, sorting, searching, stack, queue, object storage, garbage collection, SPL heap, priority-queue, date-time, monotonic-clock, PDO transaction, and `array_key_exists()` references, plus primary streaming-algorithm papers. Chapters 92–98 link to official Composer CLI/schema/source documentation, SemVer, PHP autoloading, PHP-FIG PSR-4, Composer ClassLoader, and PSR-4 sources. Chapter 99 links to current PHP-FIG mission/bylaws, PSR workflow/amendments/voting, participation, FAQ, status index, and RFC 2119. Chapters 100–101 link to official PHP-FIG PSR/PER indexes and specifications, the PHP Manual, and PHPStan/Psalm documentation. Chapters 102–103 link to PHP-FIG style texts, PHP-CS-Fixer, PHP_CodeSniffer, Rector, the PHP Manual, and Chapter 272 on characterization testing. The book outline and authoring rules remain defined in [SKELETON.md](../../SKELETON.md) and [AI_AUTHORING_GUIDE.md](../../AI_AUTHORING_GUIDE.md).
@@ -113,19 +115,19 @@ Chapters 120–123 link to official Doctrine/PDO/PostgreSQL/MySQL documentation.
 
 ## Open Threads
 
-- Continue Volume XVIII with Chapter 272 on characterization tests, carrying forward the architecture maps, observed dependency evidence, ownership boundaries, and safe seams established in Chapter 271.
+- Continue Volume XVIII with Chapter 273 on safe refactoring, carrying forward narrow characterization boundaries, explicit oracles, controlled effects, and observed-versus-required distinctions established in Chapter 272.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 272 — Characterization Tests: the Why This Matters section.
+Chapter 273 — Safe Refactoring: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Chapters 270–271 are complete. Continue with Chapter 272, following the legacy-PHP outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Chapters 270–272 are complete. Continue with Chapter 273, following the legacy-PHP outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
 
-Chapters 236–271 are complete. Continue with Chapter 272 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–272 are complete. Continue with Chapter 273 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -189,6 +191,8 @@ For Chapter 269, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved,
 For Chapter 270, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and git diff --check passed. Official PHP migration and history documentation was checked on 2026-09-16 for PHP 5 version boundaries, PHP 5.6-to-7.0 migration notes, deprecated functionality, and removed legacy APIs. PHP 5 runtime compatibility, live legacy production, database, queue, provider, and migration integrations were not run.
 
 For Chapter 271, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and `git diff --check` passed. The chapter was proofread for dependency direction, data/process/effect ownership, transaction boundaries, PHP entry-point differences, observability safety, and incremental architectural change. Live legacy application, database, queue, provider, deployment, and migration integrations were not run.
+
+For Chapter 272, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and `git diff --check` passed. The chapter was proofread for observation scope, observed-versus-required distinctions, oracle and normalization behavior, fixture isolation, negative paths, external-effect safety, and PHP 5/runtime limitations. PHPUnit, a PHP 5 runtime, live database, provider, queue, and shared-state comparison were not run.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
