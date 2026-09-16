@@ -1,41 +1,34 @@
 # AI Summary — Chapter 158 — Why Tests Exist
 
-- Status: planned
+- Status: complete
 - Volume: Volume 11 — TESTING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains tests as executable claims about behavior, risk-based test selection, public contracts, test levels, determinism, isolation, coverage limits, and regression tests after incidents.
 
 ## Concepts already explained
 
-None.
+Tests provide evidence rather than proof; stable behavior is a better target than private implementation details. Test levels cover different boundaries and must be combined with static analysis, monitoring, review, and recovery.
 
 ## Terminology established
 
-None.
+Executable specification, test contract, unit test, integration test, feature test, end-to-end test, contract test, determinism, test isolation.
 
 ## Examples used
 
-None.
+A time-dependent invitation test and a test-level risk map.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 159 — Unit Tests](../../volumes/11-testing/159-unit-tests.md)
+- [Chapter 160 — Integration Tests](../../volumes/11-testing/160-integration-tests.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 159 — Unit Tests: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples linted; references include PHPUnit, PHP, Martin Fowler, and OWASP guidance.

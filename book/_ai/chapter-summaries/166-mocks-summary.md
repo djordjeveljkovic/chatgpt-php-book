@@ -1,41 +1,38 @@
 # AI Summary — Chapter 166 — Mocks
 
-- Status: planned
+- Status: complete
 - Volume: Volume 11 — TESTING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains mocks as predeclared interaction verifiers, expectations and cardinality, argument matching, failures, asynchronous boundaries, overspecification, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Mocks protect meaningful collaborator protocols; they do not prove adapter, transport, or asynchronous delivery behavior. Mock only stable side-effect boundaries and avoid asserting incidental implementation details.
 
 ## Terminology established
 
-None.
+Mock, expectation, cardinality, argument matcher, interaction contract, overspecified test.
 
 ## Examples used
 
-None.
+PHPUnit payment-gateway mock with argument and idempotency-key expectations, plus a provider-failure test.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 165 — Test Doubles](../../volumes/11-testing/165-test-doubles.md)
+- [Chapter 167 — Stubs](../../volumes/11-testing/167-stubs.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 167 — Stubs: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XI proofread. PHPUnit guidance links to official documentation and Fowler's test-double explanation.

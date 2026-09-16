@@ -1,41 +1,35 @@
 # AI Summary — Chapter 174 — Flaky Tests
 
-- Status: planned
+- Status: complete
 - Volume: Volume 11 — TESTING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Flaky tests fail without a relevant code change. The chapter covers nondeterministic time and randomness, condition waits, isolation, parallelism, diagnostics, retries, quarantine ownership, CI behavior, and production regression tests.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+Flaky test, source of nondeterminism, fake clock, monotonic clock, condition wait, first-failure evidence, quarantine, and flake rate.
 
 ## Examples used
 
-None.
+A PHP fake clock and a bounded condition-wait helper using a monotonic timer.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 163 — End-to-End Tests](../../volumes/11-testing/163-end-to-end-tests.md)
+- [Chapter 172 — Mutation Testing](../../volumes/11-testing/172-mutation-testing.md)
+- [Chapter 175 — Testing Legacy Code](../../volumes/11-testing/175-testing-legacy-code.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 175 on characterization and seams for legacy code.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 175 — Testing Legacy Code: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; CI retries and browser infrastructure were not run.

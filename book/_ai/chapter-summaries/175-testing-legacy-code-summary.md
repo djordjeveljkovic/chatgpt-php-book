@@ -1,41 +1,35 @@
 # AI Summary — Chapter 175 — Testing Legacy Code
 
-- Status: planned
+- Status: complete
 - Volume: Volume 11 — TESTING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Testing legacy code starts with risk-aware characterization and incremental seams. The chapter covers observed behavior, global and static dependencies, external effects, small refactoring steps, missing tests, data compatibility, migrations, rollback, and delivery.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+Legacy code, characterization test, seam, test-safe boundary, strangler migration, expand-and-contract, behavior contract, and risk-based coverage.
 
 ## Examples used
 
-None.
+A PHP characterization test, an injected mailer seam, and incremental control of external effects.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 159 — Unit Tests](../../volumes/11-testing/159-unit-tests.md)
+- [Chapter 160 — Integration Tests](../../volumes/11-testing/160-integration-tests.md)
+- [Chapter 164 — Contract Tests](../../volumes/11-testing/164-contract-tests.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Volume XII, Chapter 177 on code quality.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 177 — Code Quality: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; legacy application integration tests were not run.

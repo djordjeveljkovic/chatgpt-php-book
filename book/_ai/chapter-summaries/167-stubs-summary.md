@@ -1,41 +1,38 @@
 # AI Summary — Chapter 167 — Stubs
 
-- Status: planned
+- Status: complete
 - Volume: Volume 11 — TESTING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains stubs as predetermined answers, fixed clocks, PHPUnit stub configuration, failure answers, invalid fixtures, boundary placement, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+A stub supplies state or a result without verifying interaction. It makes time and external answers deterministic; integration or contract tests still need to prove the real boundary can provide those answers.
 
 ## Terminology established
 
-None.
+Stub, predetermined answer, fixed clock, failure injection, boundary fixture, provider contract.
 
 ## Examples used
 
-None.
+A fixed clock, PHPUnit repository stub, callback answer, and provider-timeout stub.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 166 — Mocks](../../volumes/11-testing/166-mocks.md)
+- [Chapter 168 — Fakes](../../volumes/11-testing/168-fakes.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 168 — Fakes: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XI proofread. PHPUnit stub guidance links to official documentation and Fowler's test-double explanation.

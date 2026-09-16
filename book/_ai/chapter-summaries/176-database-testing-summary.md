@@ -1,41 +1,39 @@
 # AI Summary — Chapter 176 — Database Testing
 
-- Status: planned
+- Status: complete
 - Volume: Volume 11 — TESTING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains database-test boundaries, production-engine compatibility, PDO integration tests, migration and constraint tests, fixtures and cleanup, transaction and concurrency tests, query assertions, CI isolation, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Database mocks cannot prove SQL or engine behavior. Use the production database family in isolation, apply real migrations, test constraints and transactions, and combine repository tests with endpoint and operational checks. Transaction-per-test cleanup has connection and worker limits.
 
 ## Terminology established
 
-None.
+Database integration test, migration test, fixture builder, transaction-per-test, schema isolation, invariant, concurrency test.
 
 ## Examples used
 
-None.
+A guarded PDO test connection, idempotency-key schema and repository, a fixture builder, transaction cleanup, and concurrency-test guidance.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 114 — Transactions](../../volumes/08-databases/114-transactions.md)
+- [Chapter 115 — Isolation](../../volumes/08-databases/115-isolation.md)
+- [Chapter 117 — Deadlocks](../../volumes/08-databases/117-deadlocks.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 177 — Coupling: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XI proofread. Database guidance links to PHP, PHPUnit, OWASP, PostgreSQL, and MySQL documentation.
