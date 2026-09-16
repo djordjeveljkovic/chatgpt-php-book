@@ -2,11 +2,11 @@
 
 ## Current Volume
 
-Volume XX — Senior Engineering
+Volume XXI — REFERENCE
 
 ## Current Chapter
 
-Chapter 299 — Common Mistakes
+Chapter 301 — Data Structure Guide
 
 ## Current Section
 
@@ -162,19 +162,19 @@ Chapter 297 adds a senior-interview reasoning framework covering requirement cla
 
 ## Open Threads
 
-- Continue Volume XXI with Chapter 299 on Common Mistakes, carrying forward the senior reasoning, runtime, compatibility, migration, trade-off, technical-decision, incident-investigation, security-review, performance-investigation, production-debugging, technical-debt, architecture-review, code-review, legacy, framework, database, case-study, reservation-service, and search/filtering evidence developed in Chapters 270–298.
+- Continue Volume XXI with Chapter 302 on Algorithm Guide, carrying forward the senior reasoning, runtime, compatibility, migration, trade-off, technical-decision, incident-investigation, security-review, performance-investigation, production-debugging, technical-debt, architecture-review, code-review, legacy, framework, database, case-study, reservation-service, search/filtering, anti-pattern, and data-structure evidence developed in Chapters 270–301.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 299 — Common Mistakes: the Why This Matters section.
+Chapter 302 — Algorithm Guide: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–287 are complete. Volume XX Chapters 288–297 are complete. Continue with Chapter 298, following the reference-volume outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, durable messages, partial failure, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–287 are complete. Volume XX Chapters 288–297 are complete. Volume XXI Chapters 298–301 are complete. Continue with Chapter 302, following the reference-volume outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, durable messages, partial failure, consistency, and operational behavior.
 
-Chapters 236–298 are complete. Continue with Chapter 299 and preserve the distinction between local implementation, version-specific behavior, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–301 are complete. Continue with Chapter 302 and preserve the distinction between local implementation, version-specific behavior, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -294,6 +294,10 @@ For Chapter 297, the source contains structured interview guidance and no execut
 For Chapter 298, the source contains compatibility matrices and prose with no executable PHP blocks. Ten local Markdown links resolved, and `git diff --check` passed. The chapter received planning-agent review and a local editorial check for version/SAPI/Composer distinctions, mixed-version rollout, artifact compatibility, migration, and the Chapter 299 handoff. Live multi-version, extension, Composer, and deployment tests were not run.
 
 For Chapter 299, the source contains diagnostic prose and tables with no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter received a local editorial check for invariant-based diagnosis, PHP value semantics, security, concurrency, external effects, testing, performance, and the Chapter 300 handoff. Live database, provider, queue, and deployment integrations were not run.
+
+For Chapter 300, the source contains diagnostic prose and tables with no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter received a local editorial check for context, ownership, source-of-truth, retries, bounded work, testing, rewrites, and the Chapter 301 handoff. Live architecture, provider, queue, and deployment integrations were not run.
+
+For Chapter 301, the source contains selection tables and prose with no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter received a local editorial check for PHP array semantics, complexity assumptions, memory, stable ordering, streaming, database ownership, and the Chapter 302 handoff. Live workload, database, and queue integrations were not run.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
