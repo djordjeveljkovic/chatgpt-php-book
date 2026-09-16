@@ -6,7 +6,7 @@ Volume XXI — REFERENCE
 
 ## Current Chapter
 
-Chapter 303 — Testing Decision Guide
+Chapter 305 — Database Decision Guide
 
 ## Current Section
 
@@ -162,19 +162,19 @@ Chapter 297 adds a senior-interview reasoning framework covering requirement cla
 
 ## Open Threads
 
-- Continue Volume XXI with Chapter 304 on Architecture Decision Guide, carrying forward the senior reasoning, runtime, compatibility, migration, trade-off, technical-decision, incident-investigation, security-review, performance-investigation, production-debugging, technical-debt, architecture-review, code-review, legacy, framework, database, case-study, reservation-service, search/filtering, anti-pattern, data-structure, algorithm, and testing evidence developed in Chapters 270–303.
+- Continue Volume XXI with Chapter 306 on Performance Checklist, carrying forward the senior reasoning, runtime, compatibility, migration, trade-off, technical-decision, incident-investigation, security-review, performance-investigation, production-debugging, technical-debt, architecture-review, code-review, legacy, framework, database, case-study, reservation-service, search/filtering, anti-pattern, data-structure, algorithm, testing, architecture, and database evidence developed in Chapters 270–305.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 304 — Architecture Decision Guide: the Why This Matters section.
+Chapter 306 — Performance Checklist: the Why This Matters section.
 
 ## Writing Notes
 
 Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Volume XVIII Chapters 270–279 are complete. Volume XIX Chapters 280–287 are complete. Volume XX Chapters 288–297 are complete. Volume XXI Chapters 298–301 are complete. Continue with Chapter 302, following the reference-volume outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, durable messages, partial failure, consistency, and operational behavior.
 
-Chapters 236–303 are complete. Continue with Chapter 304 and preserve the distinction between local implementation, version-specific behavior, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–305 are complete. Continue with Chapter 306 and preserve the distinction between local implementation, version-specific behavior, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -302,6 +302,10 @@ For Chapter 301, the source contains selection tables and prose with no executab
 For Chapter 302, the source contains algorithm worksheets and prose with no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter received a local editorial check for algorithm contracts, deterministic ordering, pagination, batching, streaming, retries, concurrency, complexity, and the Chapter 303 handoff. Live workload and database integrations were not run.
 
 For Chapter 303, the source contains testing decision tables and prose with no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter received a local editorial check for claim-to-evidence mapping, test boundaries, doubles, SQL/provider behavior, time, concurrency, security, coverage limits, and the Chapter 304 handoff. Live test suites and integrations were not run.
+
+For Chapter 304, the source contains an ADR template and prose with no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter received a local editorial check for boundary selection, ownership, source of truth, consistency, failure, observability, migration, and reversibility. Live architecture, deployment, queue, and database integrations were not run.
+
+For Chapter 305, the source contains decision tables and prose with no executable PHP blocks. Local Markdown links and required handoff files resolved, and `git diff --check` passed. The chapter received a local editorial check for invariants, SQL placement, plans, constraints, transactions, locks, replicas, projections, tenancy, migration, and reconciliation. Live database and deployment integrations were not run.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
