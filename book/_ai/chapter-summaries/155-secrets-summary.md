@@ -1,41 +1,38 @@
 # AI Summary — Chapter 155 — Secrets
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains secret inventory and ownership, storage and delivery, least privilege, short-lived credentials, rotation overlap, redaction, incident response, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Secrets need a lifecycle of creation, scoped access, use, rotation, revocation, and recovery. Environment variables are delivery mechanisms rather than vaults; logging, backups, images, and process tooling are exposure paths.
 
 ## Terminology established
 
-None.
+Secret inventory, secret manager, least privilege, short-lived credential, rotation overlap, revocation, redaction.
 
 ## Examples used
 
-None.
+PHP required-secret loading, an authenticated HTTP header, and a two-key signing rotation reader.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 142 — Security Model](../../volumes/10-security/142-security-model.md)
+- [Chapter 153 — Session Security](../../volumes/10-security/153-session-security.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 156 — Dependency Security: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated security proofread. Secret guidance links to OWASP, PHP, and NIST documentation.

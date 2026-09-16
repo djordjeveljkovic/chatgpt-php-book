@@ -1,40 +1,40 @@
 # AI Summary — Chapter 125 — Requests
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Written material covers request parts and source separation, query and repeated values, body limits, JSON decoding, media types, typed request objects, forwarding trust, failure statuses, security, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Request source boundaries; presence versus null; body size and media-type policies; strict decoding; validation versus authorization; trusted proxies.
 
 ## Terminology established
 
-None.
+request target, content type, accept, typed boundary, malformed syntax, semantic validation, parser differential.
 
 ## Examples used
 
-None.
+`queryString`, `readJsonObject`, and `CreateReportRequest` PHP examples.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Cross-references Chapters 132 (Forms), 133 (Uploads), and the neighboring HTTP, responses, and headers chapters.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No open writing thread; authentication and authorization remain separate later chapters.
 
 ## Exact next section
 
-The Why This Matters section.
+Complete; maintenance should verify parser and PHP input behavior against current documentation.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+Request semantics reference RFC 9110; PHP body and JSON claims reference the PHP manuals for `php://input` and `json_decode`.
 
 ## Writing notes
 

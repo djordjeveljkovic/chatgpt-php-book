@@ -1,41 +1,37 @@
 # AI Summary — Chapter 130 — Authentication
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains authentication boundaries, password hashing and verification, rehashing, generic failures and rate limiting, sessions, remember-me tokens, MFA/passkeys, OAuth/OIDC validation, recovery, verification, threats, testing, exercises, review questions, and references.
 
 ## Concepts already explained
 
-None.
+Passwords are verifiers, bearer credentials need revocation, external identity assertions require validation, and recovery is part of authentication.
 
 ## Terminology established
 
-None.
+Credential stuffing, enumeration, password rehashing, bearer token, token family, step-up authentication, OpenID Connect.
 
 ## Examples used
 
-None.
+Password API helpers, login service, remember-me selector/validator token pair.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+[Chapter 129](../../volumes/09-http-and-application-development/129-sessions.md) for session rotation; [Chapter 131](../../volumes/09-http-and-application-development/131-authorization.md) for access decisions.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Later security chapters can deepen password, session, and authorization controls.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter complete.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples are syntax-checked; references point to PHP password/random APIs, OWASP, and OpenID Connect Core.

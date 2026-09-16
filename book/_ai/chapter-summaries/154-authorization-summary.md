@@ -1,41 +1,41 @@
 # AI Summary — Chapter 154 — Authorization
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Covers authorization decision inputs, RBAC/ABAC/relationship models, query scoping and object checks, concurrent state transitions, tenants and caches, background work, failure analysis, and authorization testing.
 
 ## Concepts already explained
 
-None.
+Subject, action, resource, context, policy decision, RBAC, ABAC, relationship check, object-level authorization, tenant scope, deny by default, stale policy, and guarded update.
 
 ## Terminology established
 
-None.
+Policy engine, capability, resource scope, authorization cache, policy version, confused deputy, and decision audit.
 
 ## Examples used
 
-None.
+PHP policy interfaces, tenant-scoped queries, guarded SQL updates, relationship checks, background command context, and authorization decision tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Links to Chapters 131, 142, 143, 115–118, and OWASP authorization guidance.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Volume X security chapters are complete through Chapter 157; continue with Volume XI Chapter 158.
 
 ## Exact next section
 
-The Why This Matters section.
+The Why This Matters section of Chapter 158 — Why Tests Exist.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP examples linted during the Volume X proofread; local links and whitespace checks pass.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Keep authentication, authorization, and database constraints distinct; live multi-tenant integration tests were not run.

@@ -1,41 +1,34 @@
 # AI Summary — Chapter 145 — XSS
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains stored/reflected/DOM XSS, context-specific encoding, safe DOM APIs, CSP, cookie layers, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Output encoding is sink-specific; HTML, JavaScript, CSS, URL, and rich-HTML contexts need different controls. CSP and `HttpOnly` reduce impact but do not replace correct encoding or authorization.
 
 ## Terminology established
 
-None.
+XSS, stored XSS, reflected XSS, DOM XSS, output sink, context-specific encoding, CSP, safe DOM API.
 
 ## Examples used
 
-None.
+PHP `htmlspecialchars()` output and safe DOM/CSP policies.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 134 — APIs](../../volumes/09-http-and-application-development/134-apis.md)
+- [Chapter 146 — CSRF](../../volumes/10-security/146-csrf.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 146 — CSRF: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links are covered by the consolidated security proofread. XSS guidance links to OWASP, PHP, and MDN.

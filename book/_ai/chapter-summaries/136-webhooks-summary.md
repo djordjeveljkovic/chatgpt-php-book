@@ -1,41 +1,25 @@
-# AI Summary — Chapter 136 — Webhooks
+# AI Summary — Chapter 136
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
-
-## Concepts already explained
-
-None.
+Webhooks deliver event notifications to external consumers over HTTP. The chapter covers signed payloads, replay protection, retries/backoff, timeouts, idempotent consumers, delivery state, observability, and testing.
 
 ## Terminology established
-
-None.
+Webhook, event envelope, delivery attempt, signature, replay window, endpoint state, idempotent consumer.
 
 ## Examples used
-
-None.
+Signed webhook verification, delivery retry policy, and durable delivery records.
 
 ## Cross-references
-
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 134 — APIs](../../volumes/09-http-and-application-development/134-apis.md)
+- [Chapter 141 — Idempotency](../../volumes/09-http-and-application-development/141-idempotency.md)
 
 ## Exact next section
-
-The Why This Matters section.
+Chapter 137 — SSE: the Why This Matters section.
 
 ## Technical verification notes
-
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links are covered by the consolidated HTTP/security proofread.

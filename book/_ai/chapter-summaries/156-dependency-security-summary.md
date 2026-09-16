@@ -1,41 +1,38 @@
 # AI Summary — Chapter 156 — Dependency Security
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains Composer dependency graphs and lockfiles, audit and validation, update review, Composer plugins, advisory response, runtime boundaries, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+A dependency runs with application privileges. `composer.lock` improves repeatability but is not proof of safety; audit findings require reachability and impact analysis. Composer plugins execute during installation and need explicit policy.
 
 ## Terminology established
 
-None.
+Direct dependency, transitive dependency, lockfile, advisory, reachability, Composer plugin, compensating control, production artifact.
 
 ## Examples used
 
-None.
+Composer validation/audit commands, locked production installation, and a named `allow-plugins` policy.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 103 — Automated Refactoring](../../volumes/07-composer-and-the-php-ecosystem/103-automated-refactoring.md)
+- [Chapter 157 — Supply Chain Security](../../volumes/10-security/157-supply-chain-security.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 157 — Supply Chain Security: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+JSON syntax and local links were checked in the consolidated security proofread. Dependency guidance links to Composer and OWASP documentation.

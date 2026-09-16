@@ -1,41 +1,25 @@
-# AI Summary — Chapter 140 — API Versioning
+# AI Summary — Chapter 140
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
-
-## Concepts already explained
-
-None.
+API versioning manages incompatible contract changes over time. The chapter covers URL/header/media-type strategies, additive changes, deprecation, compatibility tests, migration windows, and observability.
 
 ## Terminology established
-
-None.
+API version, compatibility window, deprecation, media-type version, migration policy.
 
 ## Examples used
-
-None.
+Versioned response contracts, additive evolution, deprecation headers, and client migration.
 
 ## Cross-references
-
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 134 — APIs](../../volumes/09-http-and-application-development/134-apis.md)
+- [Chapter 135 — REST](../../volumes/09-http-and-application-development/135-rest.md)
 
 ## Exact next section
-
-The Why This Matters section.
+Chapter 141 — Idempotency: the Why This Matters section.
 
 ## Technical verification notes
-
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP/HTTP examples and local links are covered by the consolidated HTTP/security proofread.

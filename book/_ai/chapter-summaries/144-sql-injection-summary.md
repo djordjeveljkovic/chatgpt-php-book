@@ -1,41 +1,25 @@
-# AI Summary — Chapter 144 — SQL Injection
+# AI Summary — Chapter 144
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
-
-## Concepts already explained
-
-None.
+SQL injection occurs when untrusted input changes SQL structure. The chapter covers vulnerable concatenation, prepared statements, allow-listed identifiers, second-order injection, least privilege, testing, and monitoring.
 
 ## Terminology established
-
-None.
+SQL injection, parameter binding, second-order injection, identifier allow-list, least privilege.
 
 ## Examples used
-
-None.
+Vulnerable query, prepared statement, dynamic sort allow-list, and injection tests.
 
 ## Cross-references
-
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 106 — Prepared Statements](../../volumes/08-databases/106-prepared-statements.md)
+- [Chapter 143 — Input Validation](../../volumes/10-security/143-input-validation.md)
 
 ## Exact next section
-
-The Why This Matters section.
+Chapter 145 — XSS: the Why This Matters section.
 
 ## Technical verification notes
-
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links are covered by the consolidated security proofread. SQL injection guidance links to OWASP and PHP documentation.

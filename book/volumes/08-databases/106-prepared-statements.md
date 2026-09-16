@@ -5,17 +5,205 @@ volume_title: DATABASES
 chapter: 106
 title: Prepared Statements
 slug: prepared-statements
-status: planned
+status: complete
 summary: ../../_ai/chapter-summaries/106-prepared-statements-summary.md
 ---
 
 # Chapter 106 — Prepared Statements
 
-> This chapter is part of the initial scaffold and has not been written yet.
+## Why This Matters
 
-The chapter will be written according to the [AI Authoring Guide](../../../AI_AUTHORING_GUIDE.md) and the authoritative [book skeleton](../../../SKELETON.md).
+SQL is a program sent to a database. User input is data that should be supplied to that program, not text that changes its structure. Building a query by concatenating request values allows a value to become SQL syntax, creating injection risk and making quoting rules the application's responsibility.
+
+Prepared statements separate the statement template from parameter values. They improve safety and can let a driver or database reuse parsing work. They do not validate business input, authorize a user, or make an unsafe query design efficient.
+
+[Chapter 105](105-pdo.md) introduced PDO connections and statements. This chapter focuses on binding values, dynamic SQL structure, type behavior, and the boundaries prepared statements do not cover.
+
+## Mental Model
+
+The safe boundary has two phases:
+
+```text
+SQL template with placeholders
+              ↓ prepare
+database statement structure
+              ↓ execute(values)
+data values remain values
+```
+
+Placeholders represent values in expression positions. They generally cannot stand for a table name, column name, keyword, or arbitrary list of SQL syntax. Dynamic structure needs an allow-list chosen by application code.
+
+## The Unsafe Pattern
+
+This code lets a request alter the SQL program:
+
+```php
+$email = $_GET['email'];
+$sql = "SELECT id FROM users WHERE email = '$email'";
+$row = $db->query($sql)->fetch();
+```
+
+Escaping is difficult to apply consistently across encodings and SQL contexts, and an escaped string is still the wrong abstraction for a value boundary. Use a prepared statement instead:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+$statement = $db->prepare(
+    'SELECT id, email FROM users WHERE email = :email'
+);
+$statement->execute(['email' => $email]);
+$user = $statement->fetch(PDO::FETCH_ASSOC);
+```
+
+The placeholder is not quoted in the SQL text. PDO and the driver transmit the value according to the driver's rules. Do not add SQL quotes around a named placeholder.
+
+## Binding Values Explicitly
+
+Passing an array to `execute()` is concise. `bindValue()` is useful when the parameter type or lifecycle should be explicit:
+
+```php
+$statement = $db->prepare(
+    'SELECT id FROM orders WHERE customer_id = :customer_id AND state = :state'
+);
+$statement->bindValue(':customer_id', $customerId, PDO::PARAM_INT);
+$statement->bindValue(':state', $state, PDO::PARAM_STR);
+$statement->execute();
+```
+
+`PDO::PARAM_INT` communicates an integer to the driver, but it does not check that an arbitrary string is a valid domain identifier. Validate the request before binding it. PDO has a limited set of parameter types; dates, decimals, UUIDs, and JSON values are commonly sent as strings and validated by application and database constraints.
+
+Do not confuse a PHP cast with validation. `(int) '12abc'` produces an integer under PHP conversion rules; it does not establish that the original request was a valid ID. Parse and reject malformed input before constructing the parameter array.
+
+## Repeated and Named Parameters
+
+Portable PDO code should not rely on reusing the same named placeholder more than once in a prepared statement. Use distinct names:
+
+```php
+$statement = $db->prepare(
+    'SELECT id FROM events
+     WHERE starts_at >= :from_time AND ends_at < :to_time
+     AND created_at >= :from_time_created'
+);
+$statement->execute([
+    'from_time' => $from,
+    'to_time' => $to,
+    'from_time_created' => $from,
+]);
+```
+
+Some drivers emulate prepares and some support native prepares differently. Configure and test the driver mode used in production; do not assume all PDO drivers have identical parsing and type behavior. `ATTR_EMULATE_PREPARES` can affect placeholder parsing and server-side preparation, but changing it does not replace input validation or query design.
+
+## Dynamic `IN` Lists
+
+A single placeholder represents one value, not a variable number of values. Generate a placeholder for each validated item:
+
+```php
+$ids = array_values(array_unique(array_map('intval', $requestedIds)));
+if ($ids === []) {
+    return [];
+}
+
+$names = array_map(
+    static fn (int $index): string => ':id_' . $index,
+    array_keys($ids),
+);
+
+$sql = sprintf(
+    'SELECT id, name FROM teams WHERE id IN (%s)',
+    implode(', ', $names),
+);
+$statement = $db->prepare($sql);
+
+foreach ($ids as $index => $id) {
+    $statement->bindValue(':id_' . $index, $id, PDO::PARAM_INT);
+}
+
+$statement->execute();
+```
+
+The values are bound; only the placeholder names and punctuation are generated by trusted code. Define a maximum list size, and consider a temporary table or bulk input strategy for very large lists. An empty list must be handled before generating `IN ()`, whose syntax is not portable.
+
+## Dynamic Identifiers and Sort Direction
+
+This is unsafe because a placeholder cannot represent an identifier:
+
+```php
+$column = $_GET['sort'];
+$sql = "SELECT id, email FROM users ORDER BY $column";
+```
+
+Map external choices to fixed SQL fragments:
+
+```php
+$sortColumns = [
+    'newest' => 'created_at DESC, id DESC',
+    'name' => 'display_name ASC, id ASC',
+];
+
+$orderBy = $sortColumns[$requestedSort] ?? $sortColumns['newest'];
+$statement = $db->query(
+    'SELECT id, email, display_name FROM users ORDER BY ' . $orderBy
+);
+```
+
+The map, not the request, supplies the SQL. Keep it close to the query and test every supported option. The same approach applies to table names, column lists, and optional clauses.
+
+## Error Handling and Transactions
+
+Configure PDO to throw exceptions for database errors. Catch errors at a boundary that can roll back a transaction or translate a known constraint failure. Do not return raw SQL or connection details to an HTTP client. A prepared statement can still fail because of a missing table, a constraint, a timeout, or a deadlock.
+
+When multiple statements form one invariant, prepare and execute them inside a transaction. [Chapter 114](114-transactions.md) and [Chapter 117](117-deadlocks.md) explain rollback and retry boundaries. Do not catch an exception, ignore it, and continue using a transaction that the driver or database has marked failed.
+
+## Performance and Plan Reuse
+
+Prepared statements can reduce repeated parsing and provide a safe value boundary, but the performance benefit depends on the driver, server, statement lifetime, and workload. A prepared statement does not guarantee a good index or a stable execution plan. Measure with the database's plan tools and production-like parameters.
+
+Avoid preparing one statement inside a loop when one prepared statement can be reused safely. Conversely, do not retain thousands of statement objects in a long-running worker without considering memory and connection lifetime. The database still pays for rows scanned, joins, sorting, and returned data.
+
+## Testing and Security
+
+Test values containing quotes, Unicode, wildcard characters, null bytes where the driver permits them, and very large input. Confirm that they remain values and cannot change result-set structure. Test each allow-listed sort option and reject or default unknown options. Add integration tests against the production database family because driver emulation and type conversion differ.
+
+Prepared statements prevent one important class of SQL injection, but authorization and tenant scoping remain application responsibilities. A correctly bound query can still return another tenant's rows if its `WHERE` clause omits the tenant key.
+
+## Common Mistakes
+
+- Concatenating request values into SQL.
+- Quoting placeholders manually.
+- Trying to bind a table name, column name, or whole `IN` list.
+- Assuming `PARAM_INT` validates domain input.
+- Building dynamic SQL fragments from arbitrary request text.
+- Ignoring empty lists and maximum list sizes.
+- Logging sensitive bound values or returning driver errors to clients.
+- Treating prepared statements as a replacement for authorization or constraints.
+
+## Senior Engineer Thinking
+
+Use prepared statements as one explicit boundary in a larger design: validate input, map dynamic structure through allow-lists, bind values, enforce tenant and authorization predicates, and let constraints protect shared facts. The security property comes from keeping code and data separate; the performance property still depends on query shape and the database plan.
+
+## Exercises
+
+1. Rewrite a concatenated email lookup with a prepared statement and tests for quotes and Unicode.
+2. Implement an allow-listed sort map and test an unknown sort value.
+3. Build a bounded dynamic `IN` query that handles an empty input list.
+4. Compare `execute()` values with explicit `bindValue()` types for integer IDs and decimal amounts.
+
+## Review Questions
+
+1. What can a PDO placeholder represent?
+2. Why can a placeholder not safely stand for a column name?
+3. What does `PDO::PARAM_INT` guarantee and what does it not guarantee?
+4. Why must dynamic `IN` lists use one placeholder per value?
+5. Which security responsibilities remain after values are bound?
 
 ## Summary
 
-This chapter is currently planned. Its scope is defined by the chapter title and its position in the outline.
+Prepared statements keep SQL structure separate from values and are the default boundary for user-supplied data. Bind values, generate only trusted allow-listed SQL fragments for dynamic structure, validate domain input, and bound large lists. Prepared statements do not enforce authorization, constraints, transaction correctness, or efficient query plans.
 
+## References
+
+- [PHP Manual: PDO prepared statements](https://www.php.net/manual/en/pdo.prepared-statements.php)
+- [PHP Manual: `PDOStatement::bindValue`](https://www.php.net/manual/en/pdostatement.bindvalue.php)
+- [OWASP: SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)

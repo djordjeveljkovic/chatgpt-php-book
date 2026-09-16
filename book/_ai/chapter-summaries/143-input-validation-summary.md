@@ -1,41 +1,34 @@
 # AI Summary — Chapter 143 — Input Validation
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains semantic parsing, shape/type/range validation, normalization, output-context separation, parser limits, trusted commands, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Validation establishes acceptable input; it does not replace output encoding, authorization, SQL binding, or database constraints. Reject malformed values, normalize deliberately, and bound parser resources.
 
 ## Terminology established
 
-None.
+Semantic parser, normalization, trusted command, parser limit, output context, unknown-field policy.
 
 ## Examples used
 
-None.
+A strict positive-ID parser and boundary policies for JSON, dates, money, and identifiers.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 142 — Security Model](../../volumes/10-security/142-security-model.md)
+- [Chapter 144 — SQL Injection](../../volumes/10-security/144-sql-injection.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 144 — SQL Injection: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links are covered by the consolidated security proofread. Validation guidance links to OWASP and the PHP Manual.

@@ -1,41 +1,42 @@
 # AI Summary — Chapter 120 — Large Datasets
 
-- Status: planned
+- Status: complete
 - Volume: Volume 8 — DATABASES
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains memory and driver buffering, generator-based streaming, keyset batch checkpoints, bounded write transactions, bulk loading, consistency while rows change, backpressure, idempotent retries, and operational observability.
 
 ## Concepts already explained
 
-None.
+- Large-data work should target `O(batch size)` working memory.
+- Streaming does not remove driver buffering, transaction retention, or downstream backpressure.
+- Keyset checkpoints make resumable work predictable; checkpoints advance only with committed idempotent side effects.
+- Set-based SQL reduces data movement but can increase locks, logs, and replication pressure.
 
 ## Terminology established
 
-None.
+Working set, forward-only stream, keyset batch, checkpoint, backfill, cutoff, backpressure, idempotent retry, durable export.
 
 ## Examples used
 
-None.
+- PDO generator for users and streamed CSV output.
+- Keyset batch query and bounded update transaction.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 110 — Query Plans](../../volumes/08-databases/110-query-plans.md)
+- [Chapter 119 — Pagination](../../volumes/08-databases/119-pagination.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 121 — ORMs: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples use modern syntax and PDO APIs; driver buffering, `COPY`, and bulk-loading semantics are explicitly qualified as engine/driver-specific.

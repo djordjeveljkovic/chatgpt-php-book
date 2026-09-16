@@ -1,41 +1,38 @@
 # AI Summary — Chapter 157 — Supply Chain Security
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains supply-chain trust boundaries from source to runtime, protected review, untrusted CI inputs, build isolation, short-lived credentials, immutable artifacts, provenance, signatures, SBOMs, supplier risk, deployment verification, incident response, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Supply-chain security extends dependency security to source, CI, build inputs, artifacts, and deployment. Artifact signatures identify signers; provenance describes production; neither replaces testing, review, dependency analysis, or runtime controls.
 
 ## Terminology established
 
-None.
+Supply chain, provenance, attestation, artifact digest, immutable artifact, SBOM, protected tag, workload identity, build isolation.
 
 ## Examples used
 
-None.
+A source-to-runtime trust chain and a conceptual deployment policy requiring reviewed source, lockfile identity, artifact digest, and trusted-builder provenance.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 156 — Dependency Security](../../volumes/10-security/156-dependency-security.md)
+- [Chapter 263 — Health Checks](../../volumes/17-production-engineering/263-health-checks.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 158 — Why Tests Exist: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+Local links were checked in the consolidated security proofread. Supply-chain guidance links to SLSA, NIST SSDF, OpenSSF, OWASP, and in-toto.

@@ -1,41 +1,41 @@
 # AI Summary — Chapter 60 — PHP CLI
 
-- Status: planned
+- Status: complete
 - Volume: Volume 5 — PHP RUNTIME
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains CLI PHP as an operating-system process contract: arguments, configuration, working directory, environment, standard streams, exit status, pipes, scheduling, partial progress, retries, signals, shell boundaries, performance, security, and testing.
 
 ## Concepts already explained
 
-None.
+CLI SAPI, `$argc`/`$argv`, `STDIN`/`STDOUT`/`STDERR`, exit codes, `php` inspection/options, streaming input, batching, idempotent imports, scheduler environment differences, and command/process boundaries.
 
 ## Terminology established
 
-None.
+Invocation contract, input adapter, process exit status, partial progress, restart-safe command, machine-readable output, diagnostic stream, and scheduler boundary.
 
 ## Examples used
 
-None.
+Argument validation, typed import options, streamed line processing, scheduled command invocation, batch import/retry reasoning, and shell-command security guidance.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Connects CLI process behavior to Chapters 4–6, source/OPcache behavior in Chapters 40–59, and signal handling in Chapter 66. References PHP command-line usage/options, standard streams, `exit`, and the built-in server manuals.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+CGI/FastCGI transport and the PHP-FPM process manager follow in Chapters 61–62.
 
 ## Exact next section
 
-The Why This Matters section.
+None — chapter complete.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+CLI options, standard streams, `exit`, and the built-in server are attributed to the PHP Manual. Operational recommendations are explicitly presented as deployment contracts rather than language guarantees.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Keep stdout data separate from stderr diagnostics and preserve the distinction between a process exit and durable business completion.

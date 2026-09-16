@@ -1,41 +1,41 @@
 # AI Summary — Chapter 31 — Abstract Classes
 
-- Status: planned
+- Status: complete
 - Volume: Volume 3 — PHP OBJECT MODEL
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Complete chapter covering partially implemented parents, abstract methods, template workflows, final invariants, constructor behavior, protected compatibility, retry caveats, performance, security, testing, mistakes, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Abstract class, abstract method, concrete descendant, template method, extension point, shared invariant, protected compatibility surface, retry budget.
 
 ## Terminology established
 
-None.
+Partially implemented parent, family of algorithms, dependency landfill, final workflow, non-idempotent operation.
 
 ## Examples used
 
-None.
+`MessageHandler`; `Formatter`/`CsvFormatter`; `RetryingClient`; reservation policy template; PHPUnit formatter test.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapter 28 inheritance; Chapter 29 composition; Chapter 30 interfaces; later `final` chapter. The outline and teaching rules are in [SKELETON.md](../../../SKELETON.md).
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No open chapter-writing threads. Later work can connect abstract workflows to `final`, traits, and explicit policy objects.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter complete; next chapter is Chapter 32 — Traits.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+The chapter distinguishes PHP’s instantiation/signature rules from behavioral correctness and warns that generic retry loops do not establish idempotency.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Summary synchronized with the complete chapter on 2026-09-14.

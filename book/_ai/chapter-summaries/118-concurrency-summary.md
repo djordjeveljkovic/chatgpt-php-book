@@ -1,41 +1,43 @@
 # AI Summary — Chapter 118 — Concurrency
 
-- Status: planned
+- Status: complete
 - Volume: Volume 8 — DATABASES
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains PHP worker concurrency, lost updates, atomic guarded updates, unique constraints, idempotency keys, optimistic versions, pessimistic serialization, isolation choices, queue interleavings, concurrency tests, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+- Separate PHP requests overlap through shared database state even when each process handles one request at a time.
+- Constraints, atomic updates, version checks, locks, and queue semantics protect different invariants.
+- Isolation level is not a universal mutex; serialization failures and duplicate delivery require replay-safe handling.
 
 ## Terminology established
 
-None.
+Read-modify-write race, atomic guarded update, unique constraint, idempotency key, compare-and-swap, serialization failure, queue interleaving.
 
 ## Examples used
 
-None.
+- Lost-balance race and atomic debit.
+- Unique email/idempotency indexes, version-checked updates, and row-locked job claims.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 114 — Transactions](../../volumes/08-databases/114-transactions.md)
+- [Chapter 115 — Isolation](../../volumes/08-databases/115-isolation.md)
+- [Chapter 116 — Locks](../../volumes/08-databases/116-locks.md)
+- [Chapter 117 — Deadlocks](../../volumes/08-databases/117-deadlocks.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 119 — Pagination: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP snippets and local links are covered by the consolidated Volume VIII proofread. Isolation and locking claims are qualified by PostgreSQL/MySQL documentation.

@@ -1,41 +1,41 @@
 # AI Summary — Chapter 29 — Composition
 
-- Status: planned
+- Status: complete
 - Volume: Volume 3 — PHP OBJECT MODEL
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Complete chapter covering composition, dependency graphs, ownership, constructor injection, value objects, policy collaborators, composition roots, hidden construction, database boundaries, concurrency, performance, security, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Composition, collaborator, dependency graph, ownership, composition root, constructor injection, decorator, transaction boundary, race condition, outbox.
 
 ## Terminology established
 
-None.
+“Has-a”/“uses-a”, orchestration, infrastructure boundary, fake, N+1 call graph, shared state.
 
 ## Examples used
 
-None.
+`ReservationService` with repository/checker/clock; `BillingService` readonly dependencies; business-hours policy; reservation write race; composition-root assembly; PHPUnit past-date test.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapter 28 inheritance; Chapter 30 interfaces; earlier reservation-service reasoning; later database and concurrency volumes. The outline and teaching rules are in [SKELETON.md](../../../SKELETON.md).
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No open chapter-writing threads. Later chapters can refine interfaces for the collaborators and database enforcement of reservation invariants.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter complete; next chapter is Chapter 30 — Interfaces.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+The chapter distinguishes in-process composition from database/network boundaries and explicitly notes that composition does not solve concurrent writes.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Summary synchronized with the complete chapter on 2026-09-14.

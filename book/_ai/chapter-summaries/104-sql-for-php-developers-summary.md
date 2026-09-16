@@ -1,41 +1,42 @@
 # AI Summary — Chapter 104 — SQL for PHP Developers
 
-- Status: planned
+- Status: complete
 - Volume: Volume 8 — DATABASES
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Introduces relational tables, rows and keys, SQL's declarative model, filtering, ordering, joins, aggregation, nulls, transactions, query cost, database/PHP boundaries, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+- SQL expresses a result and lets the database choose an execution plan; query cost includes scans, joins, sorting, transfer, and PHP hydration.
+- Primary/foreign keys and constraints represent invariants; filtering, ordering, aggregation, and pagination belong near the data when appropriate.
+- SQL `NULL`, three-valued logic, half-open time ranges, and explicit ordering require deliberate handling.
 
 ## Terminology established
 
-None.
+Relation, row, column, primary key, foreign key, constraint, predicate, projection, cardinality, `NULL`, query plan, round trip.
 
 ## Examples used
 
-None.
+- Customers/orders schema and progressively improved queries.
+- PHP/PDO query boundary, indexed filtering, aggregation, and transaction examples.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 105 — PDO](../../volumes/08-databases/105-pdo.md)
+- [Chapter 107 — Query Design](../../volumes/08-databases/107-query-design.md)
+- [Chapter 114 — Transactions](../../volumes/08-databases/114-transactions.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 105 — PDO: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+Chapter examples and links are included in the consolidated Volume VIII proofread. Vendor-specific SQL differences are identified and linked to official PostgreSQL/MySQL documentation.

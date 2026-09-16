@@ -1,41 +1,25 @@
-# AI Summary — Chapter 142 — Security Model
+# AI Summary — Chapter 142
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
-
-## Concepts already explained
-
-None.
+The security model treats assets, actors, trust boundaries, threats, controls, and recovery as a system. The chapter covers threat modeling, defense in depth, least privilege, secure defaults, logging, and incident feedback.
 
 ## Terminology established
-
-None.
+Asset, actor, trust boundary, threat model, attack surface, defense in depth, least privilege.
 
 ## Examples used
-
-None.
+Threat-model worksheet, trust-boundary map, and control selection.
 
 ## Cross-references
-
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 143 — Input Validation](../../volumes/10-security/143-input-validation.md)
+- [Chapter 154 — Authorization](../../volumes/10-security/154-authorization.md)
 
 ## Exact next section
-
-The Why This Matters section.
+Chapter 143 — Input Validation: the Why This Matters section.
 
 ## Technical verification notes
-
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP/security examples and local links are covered by the consolidated security proofread.

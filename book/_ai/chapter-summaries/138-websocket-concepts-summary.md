@@ -1,41 +1,25 @@
-# AI Summary — Chapter 138 — WebSocket Concepts
+# AI Summary — Chapter 138
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
-
-## Concepts already explained
-
-None.
+WebSockets upgrade an HTTP connection into a bidirectional message channel. The chapter covers handshake boundaries, frames, lifecycle, backpressure, authentication, reconnects, ordering, and operational limits.
 
 ## Terminology established
-
-None.
+WebSocket handshake, frame, bidirectional channel, backpressure, close code, reconnect.
 
 ## Examples used
-
-None.
+Handshake flow, message validation, bounded connections, and reconnect state.
 
 ## Cross-references
-
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 124 — HTTP](../../volumes/09-http-and-application-development/124-http.md)
+- [Chapter 137 — SSE](../../volumes/09-http-and-application-development/137-sse.md)
 
 ## Exact next section
-
-The Why This Matters section.
+Chapter 139 — Rate Limiting: the Why This Matters section.
 
 ## Technical verification notes
-
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP/HTTP examples and local links are covered by the consolidated HTTP/security proofread.

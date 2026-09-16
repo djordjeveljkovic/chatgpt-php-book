@@ -1,41 +1,37 @@
 # AI Summary — Chapter 36 — Anonymous Classes
 
-- Status: planned
+- Status: complete
 - Volume: Volume 3 — PHP OBJECT MODEL
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Complete chapter on anonymous class expressions, contracts, constructors, inheritance, traits, dependency passing, readonly anonymous classes, generated names, testing, performance, security, operations, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Local implementation, engine-generated class identity, explicit constructor dependency, interface seam, anonymous class versus closure.
 
 ## Terminology established
 
-None.
+Stable contract, local behavior, promotion to named class, accidental retention, application identity.
 
 ## Examples used
 
-None.
+Fixed Clock, in-memory ReservationRepository, prefixed logger, retry policy, readonly request context, and contract tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Builds on Chapters 21, 29, 30, 32, and 34; connects to testing doubles and worker lifetimes later in the book.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Connect anonymous class declarations to compilation and runtime class metadata in Volume IV.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter complete; next chapter is Chapter 37 — Magic Methods.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+Official PHP Manual references included. Readonly anonymous classes are identified as PHP 8.3+; generated class names are treated as implementation details.

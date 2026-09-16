@@ -1,41 +1,40 @@
 # AI Summary — Chapter 148 — Command Injection
 
-- Status: planned
+- Status: complete
 - Volume: Volume 10 — SECURITY
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains shell/process injection, avoiding shells, fixed argument arrays, allow-lists, process privileges and limits, testing, observability, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+- Shell commands are programs; concatenated input can alter syntax.
+- Libraries or fixed process argument arrays are safer than shell strings, but path authorization, least privilege, and resource bounds remain required.
 
 ## Terminology established
 
-None.
+Command injection, process boundary, bypass-shell execution, executable allow-list, process isolation, output limit.
 
 ## Examples used
 
-None.
+- Vulnerable `shell_exec()` concatenation and a controlled `proc_open()` example.
+- Fixed operation maps, timeouts, restricted environment, and monitoring.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 149 — Path Traversal](../../volumes/10-security/149-path-traversal.md)
+- [Chapter 150 — File Upload Security](../../volumes/10-security/150-file-upload-security.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 149 — Path Traversal: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links are covered by the consolidated security proofread. Command-execution guidance links to OWASP and the PHP Manual.

@@ -1,41 +1,37 @@
 # AI Summary — Chapter 34 — Readonly
 
-- Status: planned
+- Status: complete
 - Volume: Volume 3 — PHP OBJECT MODEL
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Complete chapter on readonly properties and classes, initialization rules, shallow versus deep immutability, constructor-promoted commands, clone reinitialization, version behavior, security, operations, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Readonly slot, direct initialization, interior mutation, readonly class, dynamic-property prohibition, immutable value graph, copy-with-changes.
 
 ## Terminology established
 
-None.
+Write boundary, validated fact, shallow immutability, state transition, immutable collaborator.
 
 ## Examples used
 
-None.
+Reservation, Labels, Basket with ArrayObject, Money, CreateReservation, ReservationSnapshot, and readonly clone/test examples.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Builds on Chapters 23, 26, 32, and 33; connects to Chapter 38 cloning and later serialization/runtime chapters.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Explore readonly object representation and property writes in Volume IV.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter complete; next chapter is Chapter 35 — Enums.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+Official PHP Manual references included. Version notes cover readonly properties in PHP 8.1, readonly classes in PHP 8.2, clone reinitialization in PHP 8.3, and PHP 8.4 readonly setter behavior.

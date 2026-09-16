@@ -1,41 +1,37 @@
 # AI Summary — Chapter 58 — Extensions
 
-- Status: planned
+- Status: complete
 - Volume: Volume 4 — PHP UNDER THE HOOD
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains internal versus userland extensions, loaded versus built-in modules, CLI/FPM differences, module/request lifecycle hooks, process versus request state, Zend extension API and ABI boundaries, function registration and arginfo, native failures and ownership, deployment requirements, performance, security, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Extension boundary, internal function, arginfo, function table, MINIT/RINIT/RSHUTDOWN/MSHUTDOWN, module globals, ABI compatibility, native memory, linked-library dependencies, SAPI-specific configuration.
 
 ## Terminology established
 
-None.
+Extension, SAPI, shared module, internal function, arginfo, module lifecycle, request lifecycle, ABI, ZTS, native boundary, trusted computing base.
 
 ## Examples used
 
-None.
+CLI and extension inspection; a simplified native `example_add()` function; startup requirements; an extension-backed image adapter; a bad SAPI assumption; a runtime requirement checker.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Connects extension memory and cleanup to Chapter 56, lifecycle/collection to Chapter 57, and OPcache as an extension to Chapter 59. Points to Volume V for SAPI and worker behavior.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Later production chapters should apply extension compatibility matrices, native-library security review, and SAPI-specific smoke tests.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 59 — OPcache: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+Uses PHP Internals Book, PHP manual extension-loading/build references, Composer platform-dependency documentation, and php-src `ext`/`Zend` trees. Native macro signatures and ABI details are explicitly version-sensitive; the C snippet is labeled illustrative rather than a complete extension.

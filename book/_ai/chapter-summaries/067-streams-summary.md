@@ -1,41 +1,37 @@
 # AI Summary — Chapter 67 — Streams
 
-- Status: planned
+- Status: complete
 - Volume: Volume 5 — PHP RUNTIME
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains PHP stream wrappers and resources, ownership, modes, partial reads/writes, EOF, bounded buffering, timeouts, contexts, multiplexing, filters, process pipes, and cleanup.
 
 ## Concepts already explained
 
-None.
+Stream lifecycle, seekability, `fopen()`, `fread()`, `fwrite()`, `fgets()`, `feof()`, `stream_get_meta_data()`, `stream_set_timeout()`, `stream_select()`, and `stream_copy_to_stream()`.
 
 ## Terminology established
 
-None.
+Stream resource, wrapper, bounded transfer, short read, backpressure, deadline, timeout, ownership.
 
 ## Examples used
 
-None.
+Bounded `php://temp` read; explicit copy loop; streaming importer; remote stream context; SSRF and unbounded-read failure.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapter 66 for cancellation; Chapter 68 for filesystem streams; Chapter 69 for process pipes.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Use stream lifecycle rules for filesystem and process boundaries; connect timeouts to idempotent retries.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 68 — Filesystem: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+References use official PHP Streams documentation. Exact blocking, seekability, and timeout behavior must be tested for the target wrapper and platform.

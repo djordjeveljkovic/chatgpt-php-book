@@ -1,41 +1,43 @@
 # AI Summary — Chapter 106 — Prepared Statements
 
-- Status: planned
+- Status: complete
 - Volume: Volume 8 — DATABASES
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains SQL/data separation, PDO placeholders and binding, repeated parameters, dynamic `IN` lists and identifiers, allow-listed ordering, transactions, plan reuse, testing, security limits, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+- Placeholders represent values, not table names, columns, keywords, or arbitrary SQL structure.
+- Explicit binding communicates driver types but does not validate domain input.
+- Dynamic lists require one trusted placeholder per value and a bounded empty-list policy.
+- Prepared statements prevent value injection but do not provide authorization, constraints, transaction correctness, or efficient plans.
 
 ## Terminology established
 
-None.
+Prepared statement, placeholder, value boundary, dynamic SQL structure, allow-list, emulated prepare, guarded parameter, driver type.
 
 ## Examples used
 
-None.
+- PDO named parameters and explicit `bindValue()` types.
+- Dynamic `IN` placeholders and allow-listed sort fragments.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 105 — PDO](../../volumes/08-databases/105-pdo.md)
+- [Chapter 114 — Transactions](../../volumes/08-databases/114-transactions.md)
+- [Chapter 117 — Deadlocks](../../volumes/08-databases/117-deadlocks.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 107 — Query Design: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links are covered by the consolidated Volume VIII proofread. PDO behavior is qualified against the PHP Manual and driver-specific documentation.

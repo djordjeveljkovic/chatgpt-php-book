@@ -34,4 +34,4 @@ The chapters are grouped by volume and use YAML front matter so a future static-
 - [Continuation state](_ai/CONTINUATION_STATE.md)
 - [Chapter summaries](_ai/chapter-summaries/README.md)
 
-The initial scaffold contains chapter placeholders only. Writing begins with Volume I, Chapter 1.
+Volumes I–VII are complete through Chapter 103, Volume VIII is complete through Chapter 123, Volume IX is complete through Chapter 141, and Volume X is complete through Chapter 157. The remaining volumes retain their outline-backed chapter files and are being written in bounded batches; authoring progress is tracked in [_ai/CONTINUATION_STATE.md](_ai/CONTINUATION_STATE.md) and the per-chapter summaries.

@@ -1,41 +1,43 @@
 # AI Summary — Chapter 119 — Pagination
 
-- Status: planned
+- Status: complete
 - Volume: Volume 8 — DATABASES
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains offset and keyset pagination, deterministic ordering, opaque signed cursors, index alignment, snapshot limits, page sizes, counts, API contracts, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+- Offset pagination is simple but can scan deeply and shift as rows change.
+- Keyset pagination continues from the complete ordered key and needs matching predicates and indexes.
+- Cursors are untrusted API input and should be validated, scoped, and authenticated.
+- `LIMIT + 1` can derive `has_more` without an exact count; stable multi-request snapshots require a separate design.
 
 ## Terminology established
 
-None.
+Offset pagination, keyset pagination, cursor, tie-breaker, total order, page-size cap, snapshot consistency, `has_more`.
 
 ## Examples used
 
-None.
+- Offset and keyset SQL for an article feed.
+- Typed PHP cursor decoding with signature validation.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 108 — Indexes](../../volumes/08-databases/108-indexes.md)
+- [Chapter 110 — Query Plans](../../volumes/08-databases/110-query-plans.md)
+- [Chapter 118 — Concurrency](../../volumes/08-databases/118-concurrency.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 120 — Large Datasets: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP snippets and local links are covered by the consolidated Volume VIII proofread. Offset and keyset behavior is qualified by PostgreSQL/MySQL documentation and PDO parameter rules.

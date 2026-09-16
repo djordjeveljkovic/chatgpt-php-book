@@ -1,40 +1,40 @@
 # AI Summary — Chapter 124 — HTTP
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Written material covers the HTTP request/response message model, request targets, methods, safe and idempotent semantics, status classes, representations, PHP's server boundary, retries, proxy trust, security, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+HTTP message parts; transport framing versus content; safe and idempotent methods; status classes; representation contracts; forwarded-header trust.
 
 ## Terminology established
 
-None.
+request target, representation, content, safe, idempotent, final response, trusted proxy.
 
 ## Examples used
 
-None.
+Typed `HttpRequest` dispatcher for `/reports/42`, including GET/HEAD handling and 405 Allow output.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Cross-references [Chapter 141 — Idempotency](../../volumes/09-http-and-application-development/141-idempotency.md) and the volume's later requests, responses, and headers chapters.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No open writing thread; later chapters apply the protocol model to concrete request and response concerns.
 
 ## Exact next section
 
-The Why This Matters section.
+Complete; maintenance should verify HTTP status and PHP behavior against current documentation.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+Protocol claims are grounded in RFC 9110; PHP boundary and emission claims reference the PHP manuals for `$_SERVER`, `header`, and `http_response_code`.
 
 ## Writing notes
 

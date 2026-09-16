@@ -1,41 +1,42 @@
 # AI Summary — Chapter 134 — APIs
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains API contracts, transport/domain boundaries, resource and command endpoints, validation problems, status codes, caching, authentication/authorization, retries, idempotency, observability, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+- An API contract includes errors, authentication, authorization, pagination, caching, retries, and compatibility as well as JSON.
+- Problem details provide machine-readable failures; status codes should distinguish malformed, unauthorized, forbidden, conflicting, and invalid requests.
+- Timeout uncertainty makes harmful writes require idempotency and bounded downstream retry policies.
 
 ## Terminology established
 
-None.
+Transport DTO, problem details, content negotiation, object-level authorization, idempotency key, retry policy, correlation ID.
 
 ## Examples used
 
-None.
+- JSON problem response for validation errors.
+- API status policy, idempotency-key behavior, and redacted observability fields.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 124 — HTTP](../../volumes/09-http-and-application-development/124-http.md)
+- [Chapter 131 — Authorization](../../volumes/09-http-and-application-development/131-authorization.md)
+- [Chapter 141 — Idempotency](../../volumes/09-http-and-application-development/141-idempotency.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 135 — REST: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP/JSON examples and local links are covered by the consolidated Volume IX proofread. HTTP problem and API security claims link to RFC 9457 and OWASP.

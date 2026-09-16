@@ -1,41 +1,37 @@
 # AI Summary — Chapter 39 — Serialization
 
-- Status: planned
+- Status: complete
 - Volume: Volume 3 — PHP OBJECT MODEL
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Complete chapter on native PHP serialization, object class restoration, custom `__serialize()`/`__unserialize()`, legacy hooks and Serializable migration, trust boundaries, HMAC, JSON envelopes, queue/database operations, performance, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Representation boundary, native serialized object, class availability, incomplete class, versioned payload, allow-list, authenticated bytes, poison message.
 
 ## Terminology established
 
-None.
+Controlled trust domain, schema-defined format, object restoration, compatibility reader, opaque blob, deterministic schema failure.
 
 ## Examples used
 
-None.
+JobData, versioned ReservationJob, QueueEnvelope JSON, restricted `unserialize()`, and round-trip/blocked-class tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Builds on Chapters 22, 27, 34, 36–38; connects to security, queues, databases, deployment, and runtime chapters later in the book.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Connect serialization hooks to object handlers and runtime allocation in Volume IV.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter complete; next chapter is Chapter 40 — Source Code to Execution.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+Official PHP Manual references included. Version notes cover `__serialize()`/`__unserialize()` since PHP 7.4, Serializable-only deprecation since PHP 8.1, and current `unserialize()` warnings and options.

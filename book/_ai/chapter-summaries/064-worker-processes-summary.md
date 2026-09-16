@@ -1,41 +1,41 @@
 # AI Summary — Chapter 64 — Worker Processes
 
-- Status: planned
+- Status: complete
 - Volume: Volume 5 — PHP RUNTIME
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains PHP worker processes as concurrency, capacity, and failure-isolation units. Covers process/request/dependency concurrency, queueing, Little’s Law, bottleneck budgets, memory sizing, slow dependencies, retries, worker recycling, restart herds, shared-state security, metrics, load testing, and concurrency correctness.
 
 ## Concepts already explained
 
-None.
+One-request-per-worker model, finite worker pool, queue growth, effective concurrency, downstream contention, worker reuse, high-water memory, partial failure isolation, retry amplification, and durable invariants.
 
 ## Terminology established
 
-None.
+Worker concurrency budget, smallest bottleneck, queueing failure, retry storm, high-water mark, and process isolation versus tenant isolation.
 
 ## Examples used
 
-None.
+Memory/capacity arithmetic, slow-upstream scenario, worker metrics, concurrent invariant test, retry storm diagram, and deployment/recycle behavior.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Builds on FPM Chapter 62 and lifecycle Chapter 63, and leads to long-running process state in Chapter 65. References PHP FPM, status, PCNTL, OPcache, and memory manuals.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Long-running job/daemon lifecycle, signal draining, connection freshness, and persistent-memory hazards are developed in Chapter 65.
 
 ## Exact next section
 
-The Why This Matters section.
+None — chapter complete.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+Capacity equations are presented as approximations and operational reasoning tools. FPM and process-control claims are linked to PHP Manual references; actual worker behavior remains SAPI/configuration dependent.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Do not treat a higher worker count as free parallelism; correlate PHP capacity with databases and external services.

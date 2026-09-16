@@ -1,40 +1,40 @@
 # AI Summary — Chapter 126 — Responses
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Written material covers status selection, representations, JSON and HTML encoding, typed response construction, PHP emission, bodyless responses, redirects, caching, conditional requests, streaming, security, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Response contract; status outcomes; representation bytes; one-time emission; cache validators; streaming commit point; public versus internal errors.
 
 ## Terminology established
 
-None.
+representation, problem response, bodyless status, conditional request, validator, response emitter.
 
 ## Examples used
 
-None.
+`Response`, `jsonResponse`, `validationError`, and `emit` PHP examples.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Cross-references Chapters 124 (HTTP), 127 (Headers), and 137 (SSE).
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No open writing thread; later API chapters can choose response envelopes and cache policies from this foundation.
 
 ## Exact next section
 
-The Why This Matters section.
+Complete; maintenance should verify status and PHP emission behavior against current documentation.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+Status and caching claims reference RFC 9110 and RFC 9111; PHP emission claims reference the `header` and `http_response_code` manuals.
 
 ## Writing notes
 

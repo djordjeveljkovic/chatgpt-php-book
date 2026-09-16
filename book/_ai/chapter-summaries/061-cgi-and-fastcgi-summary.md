@@ -1,41 +1,41 @@
 # AI Summary — Chapter 61 — CGI and FastCGI
 
-- Status: planned
+- Status: complete
 - Volume: Volume 5 — PHP RUNTIME
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains CGI and FastCGI as web-server-to-PHP handoff contracts, including process-per-request CGI, persistent FastCGI endpoints, parameter/body/response translation, Unix sockets versus TCP, script mapping, layered timeouts, transport failures, security, performance, and integration testing.
 
 ## Concepts already explained
 
-None.
+CGI environment/stdin/stdout model, FastCGI record/process model, SAPI boundary, `SCRIPT_FILENAME`, response commitment, endpoint queueing, 502 diagnosis, socket permissions, and server/runtime separation.
 
 ## Terminology established
 
-None.
+Transport boundary, parameter map, script mapping, FastCGI endpoint, response framing, upstream queue, and boundary attribution.
 
 ## Examples used
 
-None.
+Request parameter validation, response header/body framing, Unix socket/TCP tradeoffs, mapping failures, body limits, deployment transitions, and layered transport diagnostics.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Builds on Chapters 4–6 and Chapter 40, leads to FPM in Chapter 62 and request lifecycle in Chapter 63, and references PHP CGI/FPM installation/configuration and SAPI documentation.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+FPM pool sizing, worker management, reloads, status, and resource limits are developed in Chapter 62.
 
 ## Exact next section
 
-The Why This Matters section.
+None — chapter complete.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+CGI/FastCGI and FPM claims are qualified by SAPI/build/configuration where appropriate and linked to PHP Manual installation, FPM configuration, and SAPI pages.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Keep protocol, web-server, PHP, and application failures separate when diagnosing the same client-facing gateway error.

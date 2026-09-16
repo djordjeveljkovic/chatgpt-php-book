@@ -1,20 +1,20 @@
 # AI Summary — Chapter 41 — Lexer
 
-- Status: planned
+- Status: complete
 - Volume: Volume 4 — PHP UNDER THE HOOD
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Chapter 41 explains the lexer as the stateful conversion from source characters to tokens and source positions. It covers mixed HTML/PHP mode, strings and interpolation, heredoc/nowdoc, comments and whitespace, single-character versus named tokens, lexer/parser boundaries, tokenizer APIs, version-sensitive token IDs, performance, security, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Lexer/scanner, token, token text, source position, scanner state, PHP/literal mode, parser boundary, tokenizer, `T_*` token IDs.
 
 ## Terminology established
 
-None.
+`token_get_all()` token dumper; variable-name token tool; mixed-mode source; string interpolation and heredoc examples; token-tool testing matrix.
 
 ## Examples used
 
@@ -22,20 +22,20 @@ None.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Cross-references Chapters 40–43 for the complete pipeline, parser/AST boundaries, and later compiler behavior. References include the PHP Tokenizer manual, token list, and php-src scanner files.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No open chapter-writing thread remains; parser grammar is developed in Chapter 42.
 
 ## Exact next section
 
-The Why This Matters section.
+None — chapter complete.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+Tokenizer behavior is based on the PHP Manual for `token_get_all()`, Tokenizer, and parser tokens; scanner implementation references point to current php-src `Zend/zend_language_scanner.l/.h`. Token numeric values are explicitly treated as version-sensitive.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Keep this summary short and preserve the distinction between public tokenizer output and private parser/scanner internals.

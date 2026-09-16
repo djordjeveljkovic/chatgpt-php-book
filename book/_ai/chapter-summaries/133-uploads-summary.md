@@ -1,41 +1,41 @@
 # AI Summary — Chapter 133 — Uploads
 
-- Status: planned
+- Status: complete
 - Volume: Volume 9 — HTTP AND APPLICATION DEVELOPMENT
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains upload threat modeling, `$_FILES` validation, MIME and content checks, generated storage identities, private serving, quotas, quarantine/scanning state, failure cleanup, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+- Upload metadata and bytes are untrusted; client filenames and MIME values are not storage or policy decisions.
+- Safe handling bounds size and processing, uses opaque names, stores privately, scans where required, and authorizes downloads.
+- Durable metadata and object state should be coordinated without holding database transactions during large transfers.
 
 ## Terminology established
 
-None.
+Upload boundary, quarantine, object key, MIME detection, content policy, scan state, private download, decompression bomb.
 
 ## Examples used
 
-None.
+- PHP upload validation with `finfo`, generated names, size limits, and `move_uploaded_file()`.
+- Private object download and asynchronous scanning state machine.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 132 — Forms](../../volumes/09-http-and-application-development/132-forms.md)
+- [Chapter 139 — Rate Limiting](../../volumes/09-http-and-application-development/139-rate-limiting.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 134 — APIs: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP snippets and local links are covered by the consolidated Volume IX proofread. Upload security guidance links to OWASP and PHP documentation.

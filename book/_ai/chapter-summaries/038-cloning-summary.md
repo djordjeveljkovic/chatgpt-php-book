@@ -1,41 +1,37 @@
 # AI Summary — Chapter 38 — Cloning
 
-- Status: planned
+- Status: complete
 - Volume: Volume 3 — PHP OBJECT MODEL
 - Last updated: 2026-09-14
 
 ## Written material
 
-No chapter prose has been written yet.
+Complete chapter on object identity, assignment versus clone, shallow copy, `__clone()`, ownership, deep-copy limits, readonly clone behavior, database identity, concurrency, performance, security, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+Object alias, outer identity, shallow copy, owned subgraph, shared immutable value, identity reset, copy-with-changes.
 
 ## Terminology established
 
-None.
+Clone policy, ownership boundary, external identity, PHP snapshot versus database snapshot.
 
 ## Examples used
 
-None.
+Draft, ReservationDraft, LineItems, ReservationRequest, ServiceState, and clone ownership tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Builds on Chapters 22, 23, 26, 34, and 37; connects to Chapter 39 serialization and later persistence/concurrency chapters.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Connect object cloning to object handles, references, and memory behavior in Volume IV.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter complete; next chapter is Chapter 39 — Serialization.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+Official PHP Manual references included. Version note covers readonly property reinitialization during `__clone()` from PHP 8.3.

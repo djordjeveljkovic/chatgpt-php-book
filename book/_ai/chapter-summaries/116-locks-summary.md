@@ -1,41 +1,43 @@
 # AI Summary — Chapter 116 — Locks
 
-- Status: planned
+- Status: complete
 - Volume: Volume 8 — DATABASES
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains database-owned locks, pessimistic row locking, PDO transaction scope, lock granularity and duration, optimistic version checks, waits and timeouts, observability, testing, exercises, and review questions.
 
 ## Concepts already explained
 
-None.
+- Locks protect shared database resources for a transaction; PHP process-local state cannot coordinate workers.
+- A locking read and dependent write must share a short transaction, and the locked rows must represent the real invariant.
+- Optimistic version checks are an alternative for infrequent conflicts; guarded updates require affected-row checks.
+- Lock timeouts require bounded, replay-safe handling and database-specific diagnostics.
 
 ## Terminology established
 
-None.
+Pessimistic lock, optimistic locking, guarded update, lock scope, lock granularity, lock wait, lock timeout, authoritative row.
 
 ## Examples used
 
-None.
+- `FOR UPDATE` slot consumption with PDO transaction and rollback.
+- Version-checked document update and no-overlap invariant discussion.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 114 — Transactions](../../volumes/08-databases/114-transactions.md)
+- [Chapter 115 — Isolation](../../volumes/08-databases/115-isolation.md)
+- [Chapter 117 — Deadlocks](../../volumes/08-databases/117-deadlocks.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 117 — Deadlocks: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP example linting and link validation are part of the consolidated Volume VIII proofread. Lock syntax is explicitly qualified as PostgreSQL/MySQL-sensitive and linked to their official documentation.
