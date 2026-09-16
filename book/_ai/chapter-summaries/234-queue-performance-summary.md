@@ -1,41 +1,38 @@
 # AI Summary — Chapter 234 — Queue Performance
 
-- Status: planned
+- Status: complete
 - Volume: Volume 15 — PERFORMANCE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains arrival and service rates, Little's Law, worker throughput, concurrency, batching, prefetch, partitioning, backlog and overload, retries, poison messages, PHP worker lifecycle, testing, and operations.
 
 ## Concepts already explained
 
-None.
+Queue depth alone is insufficient; age and end-to-end latency matter. More workers can saturate a downstream dependency. Batching, retries, and prefetch trade throughput for failure scope, fairness, memory, and duplicate handling.
 
 ## Terminology established
 
-None.
+Service rate, arrival rate, backlog, Little's Law, prefetch, partition, backpressure, poison message, failure transport, graceful drain.
 
 ## Examples used
 
-None.
+A bounded worker loop with acknowledgment and failure classification, capacity reasoning, queue isolation, and idempotent retry guidance.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 064 — Worker Processes](../../volumes/05-php-runtime/064-worker-processes.md)
+- [Chapter 232 — PHP-FPM](../../volumes/15-performance/232-php-fpm.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 235 — Scaling: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XV proofread. Queue guidance links to Google SRE, AWS Builders' Library, Symfony, and PHP documentation.

@@ -1,41 +1,35 @@
 # AI Summary — Chapter 227 — CPU
 
-- Status: planned
+- Status: complete
 - Volume: Volume 15 — PERFORMANCE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+CPU performance is covered through latency, throughput, algorithmic complexity, hot-path measurement, PHP runtime behavior, serialization, concurrency, queue isolation, and operations.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+CPU time, latency, throughput, hot path, expected complexity, copy-on-write, generator, OPcache, JIT, worker capacity, and tail latency.
 
 ## Examples used
 
-None.
+PHP set-based filtering, generator-based file reading, and CPU capacity guidance.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 224 — Measuring Performance](../../volumes/15-performance/224-measuring-performance.md)
+- [Chapter 225 — Benchmarking](../../volumes/15-performance/225-benchmarking.md)
+- [Chapter 228 — Memory](../../volumes/15-performance/228-memory.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 228 on PHP data lifetime and memory capacity.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 228 — Memory: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; production profiling was not run.

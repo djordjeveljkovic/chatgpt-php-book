@@ -1,41 +1,35 @@
 # AI Summary — Chapter 228 — Memory
 
-- Status: planned
+- Status: complete
 - Volume: Volume 15 — PERFORMANCE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Memory performance is covered through PHP representation, copy-on-write, generators, streaming, chunking, long-running workers, external resources, database and HTTP payloads, garbage collection, testing, and operations.
 
 ## Concepts already explained
 
-None.
-
-## Terminology established
-
-None.
+Peak memory, process RSS, copy-on-write, generator, materialization, streaming, worker retention, resource cleanup, and memory leak diagnosis.
 
 ## Examples used
 
-None.
+PHP memory instrumentation, generator-based row export, and per-job cleanup.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 227 — CPU](../../volumes/15-performance/227-cpu.md)
+- [Chapter 229 — Database Performance](../../volumes/15-performance/229-database-performance.md)
+- [Chapter 234 — Queue Performance](../../volumes/15-performance/234-queue-performance.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with Chapter 229 on query shape, plans, and database capacity.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 229 — Database Performance: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP fences and local links were checked after writing; large-data and worker load tests were not run.

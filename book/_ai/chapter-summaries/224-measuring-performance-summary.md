@@ -1,41 +1,34 @@
 # AI Summary — Chapter 224 — Measuring Performance
 
-- Status: planned
+- Status: complete
 - Volume: Volume 15 — PERFORMANCE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Covers performance metrics and dimensions, wall versus CPU time, instrumentation, traces, workload shape, experiment design, budgets, regression detection, privacy, and telemetry failure.
 
 ## Concepts already explained
 
-None.
+Measurements need workload, environment, data, cache, concurrency, and runtime context. Use bounded dimensions and redacted telemetry; metrics and traces answer different questions.
 
 ## Terminology established
 
-None.
+Latency distribution, p95, p99, wall time, CPU time, high-cardinality label, trace context, workload matrix, telemetry budget.
 
 ## Examples used
 
-None.
+PHP operation timer, metric/trace schema, workload matrix, and regression checks.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
-
-## Open threads
-
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+- [Chapter 223 — Performance Mental Model](../../volumes/15-performance/223-performance-mental-model.md)
+- [Chapter 225 — Benchmarking](../../volumes/15-performance/225-benchmarking.md)
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 225 — Benchmarking: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP timing example linted; OpenTelemetry and Prometheus references are linked.

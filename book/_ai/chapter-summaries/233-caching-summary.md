@@ -1,41 +1,38 @@
 # AI Summary — Chapter 233 — Caching
 
-- Status: planned
+- Status: complete
 - Volume: Volume 15 — PERFORMANCE
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains cache layers, cache-aside, scoped and versioned keys, TTL, invalidation, negative caching, stampedes, hot keys, HTTP caching, outages, serialization, testing, and operations.
 
 ## Concepts already explained
 
-None.
+Caching trades origin work for staleness, memory, invalidation, and failure complexity. Keys must include authorization and representation dimensions; a cache outage or stale value needs an explicit product policy.
 
 ## Terminology established
 
-None.
+Cache-aside, TTL, invalidation, negative caching, cache stampede, hot key, stale-while-revalidate, versioned key.
 
 ## Examples used
 
-None.
+Tenant-scoped cache-aside lookup, cache key versioning, stampede and invalidation guidance, and shared-cache HTTP policy.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+- [Chapter 089 — Memoization](../../volumes/06-algorithms-and-data-structures/089-memoization.md)
+- [Chapter 234 — Queue Performance](../../volumes/15-performance/234-queue-performance.md)
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+No chapter-specific open threads.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 234 — Queue Performance: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
-
-## Writing notes
-
-Keep this summary short and update it after every writing session.
+PHP examples and local links were linted in the consolidated Volume XV proofread. Cache guidance links to PHP-FIG, RFC 9111, and Fowler.
