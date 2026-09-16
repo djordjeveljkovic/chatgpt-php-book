@@ -6,7 +6,7 @@ Volume XVIII — Legacy PHP
 
 ## Current Chapter
 
-Chapter 278 — PHP Version Migration
+Chapter 279 — Legacy Case Study
 
 ## Current Section
 
@@ -112,6 +112,10 @@ Chapter 272 adds an observation pipeline, observed/required/desired behavior tab
 
 Chapter 277 adds database migration inventories, invariant and ownership charters, expand-and-contract sequencing, status compatibility, typed migration observations, dual-read/write guidance, resumable backfills, constraint/index rollout, concurrency, reconciliation, forward recovery, capacity control, failure modes, and database-migration exercises.
 
+Chapter 278 adds a runtime migration matrix, migration contract, PHP version/API categories, compatibility-scan surfaces, typed `CompatibilityStatus`, `CompatibilityCheck`, and `mayRelease()` gate, extension migration workflow, SAPI/configuration checklist, source/target characterization flow, compatibility adapter, staged rollout sequence, resource comparison, rollback checklist, failure modes, and migration exercises.
+
+Chapter 279 adds the fictional Northstar Parts legacy order-portal case study, a migration charter, hidden-contract inventory, characterization fixtures, a read-only `OrderReader` seam, separate runtime/schema/effect transitions, `export_operation_id` expansion, typed warehouse export outcomes, ambiguous-effect reconciliation, failure-domain rollout, rollback decision tree, forward recovery, retirement conditions, and integrated legacy-migration exercises.
+
 ## Cross-References
 
 The opening section links to the official PHP Manual introduction, basic syntax, and language reference. Volumes IV–V cross-reference PHP internals, memory, runtime, workers, and configuration. Chapters 72–91 link to relevant PHP Manual array, memory, generator, random-number, sorting, searching, stack, queue, object storage, garbage collection, SPL heap, priority-queue, date-time, monotonic-clock, PDO transaction, and `array_key_exists()` references, plus primary streaming-algorithm papers. Chapters 92–98 link to official Composer CLI/schema/source documentation, SemVer, PHP autoloading, PHP-FIG PSR-4, Composer ClassLoader, and PSR-4 sources. Chapter 99 links to current PHP-FIG mission/bylaws, PSR workflow/amendments/voting, participation, FAQ, status index, and RFC 2119. Chapters 100–101 link to official PHP-FIG PSR/PER indexes and specifications, the PHP Manual, and PHPStan/Psalm documentation. Chapters 102–103 link to PHP-FIG style texts, PHP-CS-Fixer, PHP_CodeSniffer, Rector, the PHP Manual, and Chapter 272 on characterization testing. The book outline and authoring rules remain defined in [SKELETON.md](../../SKELETON.md) and [AI_AUTHORING_GUIDE.md](../../AI_AUTHORING_GUIDE.md).
@@ -122,19 +126,19 @@ Chapters 120–123 link to official Doctrine/PDO/PostgreSQL/MySQL documentation.
 
 ## Open Threads
 
-- Continue Volume XVIII with Chapter 278 on PHP Version Migration, carrying forward runtime/application compatibility, database compatibility states, staged rollout, characterization evidence, and rollback distinctions established in Chapters 270–277.
+- Continue Volume XIX with Chapter 280 on the Tennis Reservation Service, carrying forward the runtime, architecture, characterization, refactoring, framework, database, version-migration, and case-study evidence developed in Chapters 270–279.
 - Apply the algorithm/data-structure/memory distinction to database, HTTP, security, testing, architecture, and production chapters.
 - Maintain the language/runtime/environment distinction as later chapters add detail.
 
 ## Exact Next Section
 
-Chapter 278 — PHP Version Migration: the Why This Matters section.
+Chapter 280 — Tennis Reservation Service: the Why This Matters section.
 
 ## Writing Notes
 
-Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Chapters 270–277 are complete. Continue with Chapter 278, following the legacy-PHP outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
+Volume VII is complete through Chapter 103. Volume VIII Chapters 104–123, Volume IX Chapters 124–141, Volume X Chapters 142–157, Volume XI Chapters 158–176, and Volume XII Chapters 177–191 are complete. Volume XIII Chapters 192–208 are complete. Volume XIV Chapters 209–222 are complete. Volume XV Chapters 223–235 and Volume XVI Chapters 236–253 are complete. Volume XVII Chapters 254–269 are complete. Chapters 270–278 are complete. Continue with Chapter 279, following the legacy-PHP outline and preserving the distinction between language/runtime compatibility, application behavior, process limits, network boundaries, and operational behavior.
 
-Chapters 236–277 are complete. Continue with Chapter 278 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
+Chapters 236–279 are complete. Continue with Chapter 280 and preserve the distinction between local implementation, process limits, network contracts, durable messages, partial failure, consistency, and operational behavior.
 
 ## Technical Verification Notes
 
@@ -210,6 +214,10 @@ For Chapter 275, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved,
 For Chapter 276, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and `git diff --check` passed. The chapter was proofread for lifecycle ordering, authorization and tenant context, bootstrap composition, response behavior, ORM boundaries, sessions/caches, worker behavior, and rollback. Live framework, database, queue, provider, and deployment integrations were not run.
 
 For Chapter 277, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and `git diff --check` passed. The chapter was proofread for schema compatibility, invariant ownership, dual-read/write hazards, backfill safety, constraint/index capacity, concurrency, reconciliation, and rollback. Live database, migration, replication, and backup integrations were not run.
+
+For Chapter 278, PHP 8.5.10 linted 1 PHP example, local Markdown links resolved, and `git diff --check` passed. Official PHP migration, deprecation, and PHP history documentation was checked on 2026-09-16 for version boundaries and migration guidance. The chapter was proofread for runtime matrices, extension and SAPI drift, compatibility gates, staged rollout, worker behavior, resource changes, and rollback. No PHP 5 runtime, live framework, database, provider, queue, deployment, or runtime-rollout integration was run.
+
+For Chapter 279, PHP 8.5.10 should lint the modern examples while the illustrative PHP 5 page remains separate legacy-runtime evidence. Local Markdown links and `git diff --check` should pass. The case-study facts are fictional; its migration principles were proofread against Chapters 270–278 and the partial-failure, idempotency, message-delivery, deployment, and rollback chapters.
 
 For Chapters 104–119, PHP 8.5.10 linted 28 PHP fences, 107 local Markdown links resolved, and `git diff --check` passed. The chapters were proofread for PDO parameter boundaries, SQL vendor qualification, query-grain and cardinality claims, transaction/lock retry boundaries, and cursor validation. Database-specific behavior is linked to official PostgreSQL/MySQL documentation; live database integration tests were not run in this pass.
 
