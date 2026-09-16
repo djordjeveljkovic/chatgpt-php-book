@@ -30,7 +30,7 @@ measurement = name + value + time + bounded attributes + unit + meaning
 For example:
 
 ```text
-http.server.request.duration
+app.http.request.duration_ms
 value: 184
 unit: milliseconds
 attributes: route=/checkout, method=POST, status_class=2xx
@@ -57,12 +57,12 @@ The dimensions are deliberately coarse. `route=/users/{id}` is useful; `route=/u
 
 Use a small number of stable metric families. A request metric family might include:
 
-* `http.server.request.count`, a counter of completed requests;
-* `http.server.request.error.count`, a counter for server-side failures;
-* `http.server.request.duration`, a histogram in milliseconds;
-* `http.server.request.in_flight`, a gauge for current concurrency.
+* `app.http.request.count`, a counter of completed requests;
+* `app.http.request.error.count`, a counter for server-side failures;
+* `app.http.request.duration_ms`, a histogram in milliseconds;
+* `app.http.request.in_flight`, a gauge for current concurrency.
 
-The exact names can follow an existing telemetry convention. Consistency across services is more valuable than inventing a clever local vocabulary.
+These are deliberately custom names because this chapter's example uses milliseconds and custom attributes. A real service may instead follow an established convention such as OpenTelemetry's HTTP semantic conventions; match that convention's units and attribute meanings exactly. Consistency across services is more valuable than inventing a clever local vocabulary.
 
 ## Counters, Gauges, and Histograms
 
@@ -95,7 +95,7 @@ metrics backend
 operator decision
 ```
 
-The PHP process may be short-lived under PHP-FPM. A process-local counter therefore describes one worker, not the whole service. Aggregation must happen across workers, hosts, containers, and releases. A long-running queue worker has a longer local lifetime, but it still must not be treated as the authoritative store for business counts: a crash can discard process-local state.
+An FPM child process may serve many requests, but ordinary request-scoped userland objects are recreated for each request. A process-local counter therefore describes one child and its current lifetime, not the whole service; process-persistent aggregation requires an explicit extension, agent, external store, or other persistent mechanism. Aggregation must happen across workers, hosts, containers, and releases. A long-running queue worker has a longer local lifetime, but it still must not be treated as the authoritative store for business counts: a crash can discard process-local state.
 
 Collection failure is part of the design. If exporting blocks the request, telemetry can increase user-visible latency. If the application drops every observation immediately, an incident may become invisible. Prefer bounded buffers, bounded export time, and a stated drop policy. For a critical business fact such as “payment captured,” use durable domain state or an audit record; a metric is not a replacement for that evidence.
 
@@ -151,31 +151,47 @@ final readonly class RequestMetrics
         int $statusCode,
         int $durationMs,
     ): void {
+        if ($statusCode < 100 || $statusCode > 599) {
+            throw new InvalidArgumentException('Invalid HTTP status code');
+        }
+
+        if ($durationMs < 0) {
+            throw new InvalidArgumentException('Duration cannot be negative');
+        }
+
         $attributes = [
             'route' => $routeTemplate,
-            'method' => $method,
-            'status_class' => (string) (intdiv($statusCode, 100) * 100) . 'xx',
+            'method' => self::normalizeMethod($method),
+            'status_class' => (string) intdiv($statusCode, 100) . 'xx',
         ];
 
-        $this->metrics->increment('http.server.request.count', 1, $attributes);
+        $this->metrics->increment('app.http.request.count', 1, $attributes);
         $this->metrics->record(
-            'http.server.request.duration',
-            max(0, $durationMs),
+            'app.http.request.duration_ms',
+            $durationMs,
             $attributes,
         );
 
         if ($statusCode >= 500) {
             $this->metrics->increment(
-                'http.server.request.error.count',
+                'app.http.request.error.count',
                 1,
                 $attributes,
             );
         }
     }
+
+    private static function normalizeMethod(string $method): string
+    {
+        $method = strtoupper($method);
+        $known = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'];
+
+        return in_array($method, $known, true) ? $method : '_OTHER';
+    }
 }
 ~~~
 
-The adapter should validate metric names and attribute keys, apply an allow-list or bounded schema, and impose limits on queued observations. The caller supplies a route template rather than a raw path because the template has bounded values. The wrapper also normalizes a negative duration to zero; a clock or measurement bug should be investigated separately rather than producing an invalid observation.
+The adapter should validate metric names and attribute keys, apply an allow-list or bounded schema, and impose limits on queued observations. The caller supplies a route template rather than a raw path because the template has bounded values. The wrapper rejects a negative duration; a clock or measurement bug should be investigated separately rather than silently producing a false zero.
 
 An in-flight gauge needs a paired increment and decrement around the request boundary. That operation must be exception-safe:
 
@@ -286,7 +302,7 @@ One host, worker, or exporter may disappear. Aggregate metrics should expose the
 
 Instrumentation has overhead in PHP: function calls, attribute construction, serialization, queueing, network export, and backend indexing. Measure that overhead on the hot path. Keep attributes small, avoid serializing complete request bodies, and batch exports outside the latency-critical operation when the reliability contract permits.
 
-Cardinality is a capacity problem. If a metric family has (n) names, (d_1, d_2, \ldots, d_k) possible values for each dimension, and (r) active resources or replicas, a rough upper bound is:
+Cardinality is a capacity problem. If there are \`n\` metric streams or names, \`d1\` through \`dk\` possible values for each of \`k\` dimensions, and \`r\` active resources or replicas, a rough upper bound is:
 
 ```text
 series ≈ n × d₁ × d₂ × … × dₖ × r
