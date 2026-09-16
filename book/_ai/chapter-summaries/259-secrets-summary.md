@@ -1,41 +1,41 @@
 # AI Summary — Chapter 259 — Secrets
 
-- Status: planned
+- Status: complete
 - Volume: Volume 17 — PRODUCTION ENGINEERING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains secret inventory, ownership, storage and delivery, narrow secret handles, signing-key rotation, expiry and revocation, logging, PHP worker retention, testing, security, and exposure response. Includes SecretProvider and ApiSigner examples.
 
 ## Concepts already explained
 
-None.
+Secret lifecycle, blast radius, least-privilege delivery, secret handle, rotation overlap, revocation, exposure response, and redaction surface.
 
 ## Terminology established
 
-None.
+Secret inventory, active credential, verification overlap, key ID, propagation time, emergency replacement, and protected observation path.
 
 ## Examples used
 
-None.
+Secret inventory, typed SecretProvider and ApiSigner, key-rotation timeline, DSN/log exposure, worker refresh, and rotation drills.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 155, 254, and 258.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with structured production evidence in Chapter 260.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 260 — Logging: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP examples. Local Markdown links resolved and git diff --check passed. No real secret, manager, or rotation integration was used.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Treats secret protection as control of the full lifecycle and every observation path.

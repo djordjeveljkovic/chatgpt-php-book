@@ -1,41 +1,41 @@
 # AI Summary — Chapter 251 — Eventual Consistency
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains eventual consistency as a contract about delay, ordering, conflicts, and recovery. Covers consistency windows, read-your-writes and monotonic reads, event replay, versioned projections, conflict policies, cache invalidation, reconciliation, PHP and framework boundaries, testing, and security.
 
 ## Concepts already explained
 
-None.
+Eventual consistency, consistency window, read-your-writes, monotonic reads, replica position, projection lag, versioned projection, conflict resolution, invalidation workflow, and reconciliation.
 
 ## Terminology established
 
-None.
+Freshness bound, authoritative event, projection version, allowed stale response, recovery rebuild, and consistency signal.
 
 ## Examples used
 
-None.
+Consistency-window diagram, freshness contract, typed ProjectedRecord and applyProjection helper, conflict policies, cache invalidation, and projection tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 233 and 250, plus the next chapter on CAP.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with partition trade-offs in Chapter 252.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 252 — CAP: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP example. Local Markdown links resolved and git diff --check passed. No live replica, cache, or message integration was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Sets explicit freshness and security requirements instead of treating eventual consistency as a generic excuse for stale data.

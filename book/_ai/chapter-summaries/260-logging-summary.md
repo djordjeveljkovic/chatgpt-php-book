@@ -1,41 +1,41 @@
 # AI Summary — Chapter 260 — Logging
 
-- Status: planned
+- Status: complete
 - Volume: Volume 17 — PRODUCTION ENGINEERING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains structured logging, levels, correlation, request and business events, exception handling, volume and cost, collection and delivery, PHP workers, privacy, security, testing, and retention. Includes a typed Logger boundary and redaction helper.
 
 ## Concepts already explained
 
-None.
+Structured event, correlation ID, operation ID, audit record, log sampling, bounded field, redaction, retention, and log delivery failure.
 
 ## Terminology established
 
-None.
+Stable event name, upstream timing, diagnostic reference, log cardinality, failure category, and audit boundary.
 
 ## Examples used
 
-None.
+Structured JSON event, typed Logger, redact and logProviderTimeout functions, asynchronous correlation, sampling, retention, and secret-absence tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 254 and 262.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with metrics and quantitative operational signals in Chapter 261.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 261 — Metrics: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP examples. Local Markdown links resolved and git diff --check passed. No live collector or log backend was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Separates operational logs from metrics, traces, audit records, and durable business state.

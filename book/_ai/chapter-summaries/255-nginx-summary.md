@@ -1,41 +1,41 @@
 # AI Summary — Chapter 255 — Nginx
 
-- Status: planned
+- Status: complete
 - Volume: Volume 17 — PRODUCTION ENGINEERING
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains Nginx as the routing, limits, buffering, caching, TLS, FastCGI, and observability boundary in front of PHP-FPM. Covers safe release layouts, proxy headers, compression, security, testing, reloads, and timeout alignment.
 
 ## Concepts already explained
 
-None.
+Document root, front controller, FastCGI boundary, proxy trust, request-body limit, buffering, streaming policy, release symlink, upstream timing, and rendered configuration.
 
 ## Terminology established
 
-None.
+Public root, dynamic route, trusted forwarding header, FastCGI socket, active release, upstream timeout, and proxy evidence.
 
 ## Examples used
 
-None.
+Request-path diagram, conceptual Nginx routing, timeout relationships, release layout, access-log correlation, and configuration failure tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapter 232 and Chapter 238 in Volume XVI.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with PHP-FPM process pools and capacity in Chapter 256.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 256 — PHP-FPM: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP examples. Local Markdown links resolved and git diff --check passed. Nginx configuration was not executed or loaded on a live host.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Treats the reverse proxy as part of application behavior and deployment safety.

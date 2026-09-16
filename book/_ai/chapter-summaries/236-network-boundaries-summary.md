@@ -1,41 +1,41 @@
 # AI Summary — Chapter 236 — Network Boundaries
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains network calls as process, ownership, timing, and failure boundaries. Covers synchronous/asynchronous work, boundary contracts, serialization and absent/null/value distinctions, narrow PHP ports and adapters, remote ambiguity, compatibility, ownership, security, and testing.
 
 ## Concepts already explained
 
-None.
+Network boundary, transport representation, synchronous interaction, asynchronous interaction, ambiguous completion, contract version, and boundary adapter.
 
 ## Terminology established
 
-None.
+Request identity, response schema, trust boundary, compatibility window, operation lookup, and response representation.
 
 ## Examples used
 
-None.
+A network-path diagram, a typed invoice request and gateway, a vague generic client contrasted with a named billing client, and compatibility and failure test cases.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapter 39 — Serialization, Chapter 151 — Deserialization, and Chapter 141 — Idempotency.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with latency and time budgets in Chapter 237.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 237 — Latency: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP examples. Local Markdown links resolved and git diff --check passed. Live network integration was not run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Preserves the book's distinction between PHP method calls and remote operations whose completion may be unknown.

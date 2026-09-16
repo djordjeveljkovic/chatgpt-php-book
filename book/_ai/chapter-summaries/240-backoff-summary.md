@@ -1,41 +1,41 @@
 # AI Summary — Chapter 240 — Backoff
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains exponential backoff, caps, jitter variants, server retry signals, delayed queue work, database and transaction waits, capacity effects, deterministic schedule testing, security, and operational monitoring. Includes a bounded full-jitter PHP delay function with injected randomness.
 
 ## Concepts already explained
 
-None.
+Exponential backoff, full jitter, equal jitter, decorrelated jitter, delay cap, retry synchronization, delayed queue work, and recovery ramp.
 
 ## Terminology established
 
-None.
+Backoff base, multiplier, cap, jitter distribution, delayed-message age, and recovery wave.
 
 ## Examples used
 
-None.
+Exponential schedule, synchronized versus jittered callers, typed fullJitterDelayMs function, queue rescheduling, and database lock retry guidance.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapter 118 — Deadlocks, Chapters 238 and 239, and the queue-performance chapter.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with partial failure in Chapter 241.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 241 — Partial Failure: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP example. Local Markdown links resolved and git diff --check passed. No live retry schedule or queue test was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Treats backoff as a coordination and capacity policy, not as a substitute for idempotency or classification.

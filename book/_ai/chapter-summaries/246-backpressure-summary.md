@@ -1,41 +1,41 @@
 # AI Summary — Chapter 246 — Backpressure
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains backpressure as a response to producers outrunning consumers. Covers bounded buffers, admission control, queues, streams, PHP-FPM, load shedding, degradation, autoscaling feedback, testing, and security. Includes a process-local AdmissionGate.
 
 ## Concepts already explained
 
-None.
+Backpressure, bounded buffer, admission control, load shedding, graceful degradation, consumer pressure, queue age, logical versus physical limit, and recovery ramp.
 
 ## Terminology established
 
-None.
+Buffer capacity, full-buffer policy, admission gate, dependency concurrency, priority work, bounded stale data, and overload signal.
 
 ## Examples used
 
-None.
+Producer/consumer pressure diagram, buffer limits, typed AdmissionGate, stream flow control, prioritized work, and autoscaling feedback.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 232 and 244, plus Chapter 247 on circuit breakers.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with circuit-breaker state and fail-fast protection in Chapter 247.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 247 — Circuit Breakers: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP example. Local Markdown links resolved and git diff --check passed. No live load or dependency-saturation test was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Treats backpressure as an explicit overload contract applied before scarce resources are acquired.

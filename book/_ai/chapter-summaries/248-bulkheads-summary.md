@@ -1,41 +1,41 @@
 # AI Summary — Chapter 248 — Bulkheads
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains bulkheads as isolation of in-flight work and resource budgets. Covers pool selection, semaphores, sizing across replicas, queues, tenants, PHP-FPM, circuit-breaker interaction, testing, and security. Includes a process-local Semaphore example.
 
 ## Concepts already explained
 
-None.
+Bulkhead, resource pool, logical semaphore, physical isolation, pool fragmentation, tenant fairness, downstream budget, and noisy neighbor.
 
 ## Terminology established
 
-None.
+Protected pool, consumer pool, local concurrency limit, global concurrency limit, idle fragmentation, and override path.
 
 ## Examples used
 
-None.
+Shared-pool and bulkhead diagrams, typed Semaphore, pool-sizing equations, queue isolation, tenant tiers, and failure tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 232, 246, and 247.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with lease safety and fencing in Chapter 249.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 249 — Distributed Locks: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP example. Local Markdown links resolved and git diff --check passed. No cross-process or load test was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Separates concurrency isolation from circuit failure detection and from authorization.

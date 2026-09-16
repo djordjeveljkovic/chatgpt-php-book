@@ -1,41 +1,41 @@
 # AI Summary — Chapter 238 — Timeouts
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains connect, handshake, write, read, total, lease, and lock timeouts; monotonic deadlines; deadline propagation; timeout ambiguity and cancellation; choosing coherent values; timeout storms; PHP resource cleanup; security; and deterministic testing.
 
 ## Concepts already explained
 
-None.
+Phase timeout, total deadline, remaining budget, unknown completion, cancellation boundary, timeout storm, lease timeout, and cleanup boundary.
 
 ## Terminology established
 
-None.
+Monotonic deadline, parent deadline, response-progress timeout, queue visibility timeout, deadline margin, and ambiguous result.
 
 ## Examples used
 
-None.
+A deadline timeline, typed PHP Deadline helper, timed-out payment sequence, coherent timeout relationships, and finally-based cleanup.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapter 141 — Idempotency and Chapters 237 and 239 in this volume.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with retry classification and budgets in Chapter 239.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 239 — Retries: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP examples. Local Markdown links resolved and git diff --check passed. Live timeout and cancellation tests were not run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Emphasizes that a local timeout does not prove a remote side effect was cancelled.

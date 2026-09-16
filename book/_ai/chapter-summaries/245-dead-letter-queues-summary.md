@@ -1,41 +1,41 @@
 # AI Summary — Chapter 245 — Dead-Letter Queues
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains dead-letter queues as controlled failure paths rather than disposal. Covers failure classes, bounded failure envelopes, retry-to-DLQ flow, authorized replay, poison messages, deployment bugs, retention and privacy, PHP worker behavior, testing, and security. Includes a typed DeadLetter record.
 
 ## Concepts already explained
 
-None.
+Dead-letter queue, poison message, quarantine, failure envelope, replay authorization, repair, discard, retention, and replay drill.
 
 ## Terminology established
 
-None.
+Failure category, retry exhaustion, safe payload reference, replay rate, stop condition, failure-store capacity, and separate replay permission.
 
 ## Examples used
 
-None.
+Failure classification, main-queue-to-DLQ flow, typed FailureCategory and DeadLetter, replay procedure, retention policy, and replay drills.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 243 and 244, plus queue-performance guidance in Chapter 234.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with backpressure and overload control in Chapter 246.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 246 — Backpressure: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP example. Local Markdown links resolved and git diff --check passed. No live broker, replay, or retention test was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Treats replay as an authorized, rate-limited write operation that preserves original identities.

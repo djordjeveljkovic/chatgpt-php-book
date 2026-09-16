@@ -1,41 +1,41 @@
 # AI Summary — Chapter 253 — Service Boundaries
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains service boundaries as ownership, deployment, data, and failure boundaries. Covers decomposition signals, synchronous chatter, data ownership, contracts, a semantic PHP port, modular-monolith-first extraction, workflows, compatibility, operations, testing, and security.
 
 ## Concepts already explained
 
-None.
+Service boundary, invariant owner, synchronous chatter, data authority, derived projection, modular monolith, contract test, extraction criterion, workflow coordinator, and operational ownership.
 
 ## Terminology established
 
-None.
+Independent capability, direct table coupling, service contract, deployment overlap, extracted module, on-call ownership, and boundary readiness.
 
 ## Examples used
 
-None.
+Service ownership map, distributed-monolith call chain, typed PaymentAuthorizer port, checkout workflow, modular-monolith boundary, and extraction plan.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 194 and 208, plus Chapters 241–250 on distributed behavior.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Begin Volume XVII with Linux process and resource boundaries in Chapter 254.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 254 — Linux for PHP Engineers: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP example. Local Markdown links resolved and git diff --check passed. No live service or deployment integration was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Preserves modular-monolith-first guidance and distinguishes ownership boundaries from network placement.

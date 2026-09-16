@@ -1,41 +1,41 @@
 # AI Summary — Chapter 247 — Circuit Breakers
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains closed, open, and half-open circuit states, failure classification, fail-fast behavior, safe fallbacks, thresholds and windows, bounded probes, retry coordination, observability, testing, and security. Includes a typed process-local circuit model.
 
 ## Concepts already explained
 
-None.
+Circuit breaker, closed state, open state, half-open probe, failure threshold, cooldown, fallback, provider failure classification, and local protective policy.
 
 ## Terminology established
 
-None.
+Circuit admission, probe limit, failure window, dependency circuit, fallback outcome, and circuit reset.
 
 ## Examples used
 
-None.
+Circuit state diagram, typed CircuitState and CircuitBreaker, fallback policies, retry interaction, and failure-injection tests.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 239, 240, and 248.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with resource-pool isolation in Chapter 248.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 248 — Bulkheads: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP example. Local Markdown links resolved and git diff --check passed. No live dependency failure test was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Distinguishes a caller's protective circuit state from a global dependency health assertion.

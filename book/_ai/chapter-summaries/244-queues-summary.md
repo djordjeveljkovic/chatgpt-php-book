@@ -1,41 +1,41 @@
 # AI Summary — Chapter 244 — Queues
 
-- Status: planned
+- Status: complete
 - Volume: Volume 16 — DISTRIBUTED SYSTEMS
-- Last updated: 2026-09-14
+- Last updated: 2026-09-16
 
 ## Written material
 
-No chapter prose has been written yet.
+Explains queues as temporal decoupling with finite capacity. Covers queue contracts, commands versus events, producer acceptance, consumer concurrency, partitions, batching, priority, backlog age, PHP worker lifecycle, testing, and security. Includes a typed producer and publish result.
 
 ## Concepts already explained
 
-None.
+Queue contract, temporal decoupling, command, event, arrival rate, service rate, queue age, partition, batch scope, priority starvation, and producer acceptance.
 
 ## Terminology established
 
-None.
+Accepted work, end-to-end completion, consumer pool, batch acknowledgment, hot partition, and queue management boundary.
 
 ## Examples used
 
-None.
+Queue model, Little's Law approximation, typed WorkQueue and enqueueEmail function, consumer-pool policies, batching, priority, and worker lifecycle.
 
 ## Cross-references
 
-The chapter outline is defined in [SKELETON.md](../../../SKELETON.md).
+Chapters 234, 243, and the next chapter on dead-letter queues.
 
 ## Open threads
 
-Begin the chapter using the chapter-writing format and teaching philosophy in SKELETON.md.
+Continue with failure isolation, quarantine, and replay in Chapter 245.
 
 ## Exact next section
 
-The Why This Matters section.
+Chapter 245 — Dead-Letter Queues: the Why This Matters section.
 
 ## Technical verification notes
 
-No technical claims have been written yet.
+PHP 8.5.10 linted the chapter's PHP example. Local Markdown links resolved and git diff --check passed. No live broker or worker load test was run.
 
 ## Writing notes
 
-Keep this summary short and update it after every writing session.
+Separates queue topology and semantics from the performance measurements developed in Chapter 234.
