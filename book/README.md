@@ -6,27 +6,27 @@ The chapters are grouped by volume and use YAML front matter so a future static-
 
 ## Volumes
 
-- [Volume 1 — THE PHP MENTAL MODEL](volumes/01-the-php-mental-model/README.md)
-- [Volume 2 — PHP LANGUAGE FUNDAMENTALS](volumes/02-php-language-fundamentals/README.md)
-- [Volume 3 — PHP OBJECT MODEL](volumes/03-php-object-model/README.md)
-- [Volume 4 — PHP UNDER THE HOOD](volumes/04-php-under-the-hood/README.md)
-- [Volume 5 — PHP RUNTIME](volumes/05-php-runtime/README.md)
-- [Volume 6 — ALGORITHMS AND DATA STRUCTURES](volumes/06-algorithms-and-data-structures/README.md)
-- [Volume 7 — COMPOSER AND THE PHP ECOSYSTEM](volumes/07-composer-and-the-php-ecosystem/README.md)
-- [Volume 8 — DATABASES](volumes/08-databases/README.md)
-- [Volume 9 — HTTP AND APPLICATION DEVELOPMENT](volumes/09-http-and-application-development/README.md)
-- [Volume 10 — SECURITY](volumes/10-security/README.md)
-- [Volume 11 — TESTING](volumes/11-testing/README.md)
-- [Volume 12 — DESIGN AND PATTERNS](volumes/12-design-and-patterns/README.md)
-- [Volume 13 — ARCHITECTURE](volumes/13-architecture/README.md)
-- [Volume 14 — LARAVEL AND SYMFONY](volumes/14-laravel-and-symfony/README.md)
-- [Volume 15 — PERFORMANCE](volumes/15-performance/README.md)
-- [Volume 16 — DISTRIBUTED SYSTEMS](volumes/16-distributed-systems/README.md)
-- [Volume 17 — PRODUCTION ENGINEERING](volumes/17-production-engineering/README.md)
-- [Volume 18 — LEGACY PHP](volumes/18-legacy-php/README.md)
-- [Volume 19 — SMALL ENGINEERING PROJECTS](volumes/19-small-engineering-projects/README.md)
-- [Volume 20 — SENIOR ENGINEERING](volumes/20-senior-engineering/README.md)
-- [Volume 21 — REFERENCE](volumes/21-reference/README.md)
+- [Volume 1 — THE PHP MENTAL MODEL](volumes/01-the-php-mental-model/)
+- [Volume 2 — PHP LANGUAGE FUNDAMENTALS](volumes/02-php-language-fundamentals/)
+- [Volume 3 — PHP OBJECT MODEL](volumes/03-php-object-model/)
+- [Volume 4 — PHP UNDER THE HOOD](volumes/04-php-under-the-hood/)
+- [Volume 5 — PHP RUNTIME](volumes/05-php-runtime/)
+- [Volume 6 — ALGORITHMS AND DATA STRUCTURES](volumes/06-algorithms-and-data-structures/)
+- [Volume 7 — COMPOSER AND THE PHP ECOSYSTEM](volumes/07-composer-and-the-php-ecosystem/)
+- [Volume 8 — DATABASES](volumes/08-databases/)
+- [Volume 9 — HTTP AND APPLICATION DEVELOPMENT](volumes/09-http-and-application-development/)
+- [Volume 10 — SECURITY](volumes/10-security/)
+- [Volume 11 — TESTING](volumes/11-testing/)
+- [Volume 12 — DESIGN AND PATTERNS](volumes/12-design-and-patterns/)
+- [Volume 13 — ARCHITECTURE](volumes/13-architecture/)
+- [Volume 14 — LARAVEL AND SYMFONY](volumes/14-laravel-and-symfony/)
+- [Volume 15 — PERFORMANCE](volumes/15-performance/)
+- [Volume 16 — DISTRIBUTED SYSTEMS](volumes/16-distributed-systems/)
+- [Volume 17 — PRODUCTION ENGINEERING](volumes/17-production-engineering/)
+- [Volume 18 — LEGACY PHP](volumes/18-legacy-php/)
+- [Volume 19 — SMALL ENGINEERING PROJECTS](volumes/19-small-engineering-projects/)
+- [Volume 20 — SENIOR ENGINEERING](volumes/20-senior-engineering/)
+- [Volume 21 — REFERENCE](volumes/21-reference/)
 
 ## AI writing workflow
 
@@ -34,4 +34,4 @@ The chapters are grouped by volume and use YAML front matter so a future static-
 - [Continuation state](_ai/CONTINUATION_STATE.md)
 - [Chapter summaries](_ai/chapter-summaries/README.md)
 
-Volumes I–VII are complete through Chapter 103, Volume VIII is complete through Chapter 123, Volume IX is complete through Chapter 141, and Volume X is complete through Chapter 157, Volume XI is complete through Chapter 176, and Volume XII is complete through Chapter 191, and Volume XIII is complete through Chapter 208, and Volume XIV is complete through Chapter 222, and Volume XV is complete through Chapter 235. The remaining volumes retain their outline-backed chapter files and are being written in bounded batches; authoring progress is tracked in [_ai/CONTINUATION_STATE.md](_ai/CONTINUATION_STATE.md) and the per-chapter summaries.
+All 21 volumes are complete through Chapter 308. Authoring state is tracked in [_ai/CONTINUATION_STATE.md](_ai/CONTINUATION_STATE.md), and the per-chapter summaries remain available in [_ai/chapter-summaries/](_ai/chapter-summaries/README.md).

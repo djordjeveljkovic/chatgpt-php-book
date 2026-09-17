@@ -153,7 +153,7 @@ unique(tenant_id, sku)
 one source row maps to one deterministic upsert decision
 retrying a committed batch does not duplicate or corrupt rows
 cursor advances only after its batch outcome is durable
-~~
+~~~
 
 Use a stable row identity such as `(import_id, row_number)` for row outcomes. If an import is allowed to update an existing SKU, define last-write and version policy. If concurrent catalog edits are possible, compare a version or acquire an agreed lock; do not let a retry overwrite a newer manual change merely because the source row is old.
 

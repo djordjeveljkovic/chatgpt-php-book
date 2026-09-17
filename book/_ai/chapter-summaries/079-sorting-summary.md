@@ -6,7 +6,7 @@
 
 ## Written material
 
-Complete chapter draft explains ordering contracts, stability versus determinism, built-in sort comparison flags, key-preserving and reindexing PHP APIs, comparator correctness, multi-column sorting, precomputed sort keys, database ordering and pagination, streaming limits, complexity and memory, security, testing, common mistakes, exercises, review questions, and summary. Editorial proofread is pending.
+Complete chapter explains ordering contracts, stability versus determinism, built-in sort comparison flags, key-preserving and reindexing PHP APIs, comparator correctness, multi-column sorting, precomputed sort keys, database ordering and pagination, streaming limits, complexity and memory, security, testing, common mistakes, exercises, review questions, and summary. Editorial proofread found no necessary corrections.
 
 ## Concepts already explained
 
